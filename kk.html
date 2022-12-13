@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>전국공보지도</title>
+    
+</head>
+<body>
+
+<p>
+<form name='gongbomap'>
+<select name='gov' onchange="myFunction()">
+<option value='0'>선택해 주세요</option>
+<option value='서울특별시청,37.5664106,126.9778779'>서울특별시청</option>
+<option value='부산광역시청,35.1798382,129.0750895'>부산광역시청</option>
+<option value='대구광역시청,35.8714168,128.6018115'>대구광역시청</option>
+<option value='인천광역시청,37.4561358,126.7053009'>인천광역시청</option>
+<option value='광주광역시청,35.1600239,126.8510514'>광주광역시청</option>
+<option value='대전광역시청,36.3503525,127.3848542'>대전광역시청</option>
+<option value='울산광역시청,35.5384296,129.3114362'>울산광역시청</option>
+<option value='세종특별자치시청,36.5928909,127.2923761'>세종특별자치시청</option>
+<option value='경기도청,37.2753596,127.0085837'>경기도청</option>
+<option value='강원도청,37.8853336,127.7298371'>강원도청</option>
+<option value='충청북도청,36.6353803,127.4914989'>충청북도청</option>
+<option value='충청남도청,36.6590895,126.6719321'>충청남도청</option>
+<option value='전라북도청,35.8204789,127.1086961'>전라북도청</option>
+<option value='전라남도청,34.8160359,126.4628330'>전라남도청</option>
+<option value='경상북도청,36.5045828,128.7104150'>경상북도청</option>
+<option value='경상남도청,35.2379862,128.6923639'>경상남도청</option>
+<option value='제주특별자치도청,33.4890414,126.4983448'>제주특별자치도청</option>
+<option value='서울특별시 종로구청,37.5731711,126.9792345'>서울특별시 종로구청</option>
+<option value='서울특별시 중구청,37.5637584,126.9974735'>서울특별시 중구청</option>
+<option value='서울특별시 용산구청,37.5326105,126.9901968'>서울특별시 용산구청</option>
+<option value='서울특별시 성동구청,37.5633851,127.0370614'>서울특별시 성동구청</option>
+<option value='서울특별시 광진구청,37.5382090,127.0822052'>서울특별시 광진구청</option>
+<option value='서울특별시 동대문구청,37.5744265,127.0397268'>서울특별시 동대문구청</option>
+<option value='서울특별시 중랑구청,37.6067352,127.0929387'>서울특별시 중랑구청</option>
+<option value='서울특별시 성북구청,37.5894385,127.0168312'>서울특별시 성북구청</option>
+<option value='서울특별시 강북구청,37.6397435,127.0255618'>서울특별시 강북구청</option>
+<option value='서울특별시 도봉구청,37.6686374,127.0473782'>서울특별시 도봉구청</option>
+<option value='서울특별시 노원구청,37.6543741,127.0563321'>서울특별시 노원구청</option>
+<option value='서울특별시 은평구청,37.6027650,126.9288531'>서울특별시 은평구청</option>
+<option value='서울특별시 서대문구청,37.5792117,126.9367873'>서울특별시 서대문구청</option>
+<option value='서울특별시 마포구청,37.5664029,126.9017772'>서울특별시 마포구청</option>
+<option value='서울특별시 양천구청,37.5170178,126.8665520'>서울특별시 양천구청</option>
+<option value='서울특별시 강서구청,37.5509673,126.8496284'>서울특별시 강서구청</option>
+<option value='서울특별시 구로구청,37.4956488,126.8877849'>서울특별시 구로구청</option>
+<option value='서울특별시 금천구청,37.4569779,126.8956708'>서울특별시 금천구청</option>
+<option value='서울특별시 영등포구청,37.5264087,126.8962659'>서울특별시 영등포구청</option>
+<option value='서울특별시 동작구청,37.5124603,126.9394995'>서울특별시 동작구청</option>
+<option value='서울특별시 관악구청,37.4784473,126.9517727'>서울특별시 관악구청</option>
+<option value='서울특별시 서초구청,37.4837784,127.0327471'>서울특별시 서초구청</option>
+<option value='서울특별시 강남구청,37.5173353,127.0473819'>서울특별시 강남구청</option>
+<option value='서울특별시 송파구청,37.5147395,127.1060664'>서울특별시 송파구청</option>
+<option value='서울특별시 강동구청,37.5301187,127.1238724'>서울특별시 강동구청</option>
+<option value='부산광역시 중구청,35.1063316,129.0323868'>부산광역시 중구청</option>
+<option value='부산광역시 서구청,35.0976869,129.0239204'>부산광역시 서구청</option>
+<option value='부산광역시 동구청,35.1292965,129.0453163'>부산광역시 동구청</option>
+<option value='부산광역시 영도구청,35.0912226,129.0679593'>부산광역시 영도구청</option>
+<option value='부산광역시 부산진구청,35.1629410,129.0531118'>부산광역시 부산진구청</option>
+<option value='부산광역시 동래구청,35.2050096,129.0836468'>부산광역시 동래구청</option>
+<option value='부산광역시 남구청,35.1363167,129.0844914'>부산광역시 남구청</option>
+<option value='부산광역시 북구청,35.1972646,128.9902155'>부산광역시 북구청</option>
+<option value='부산광역시 해운대구청,35.1630938,129.1635146'>부산광역시 해운대구청</option>
+<option value='부산광역시 기장군청,35.2444745,129.2224360'>부산광역시 기장군청</option>
+<option value='부산광역시 사하구청,35.1045008,128.9748001'>부산광역시 사하구청</option>
+<option value='부산광역시 금정구청,35.2430344,129.0921401'>부산광역시 금정구청</option>
+<option value='부산광역시 강서구청,35.2121529,128.9805664'>부산광역시 강서구청</option>
+<option value='부산광역시 연제구청,35.1762716,129.0798291'>부산광역시 연제구청</option>
+<option value='부산광역시 수영구청,35.1455664,129.1131467'>부산광역시 수영구청</option>
+<option value='부산광역시 사상구청,35.1525835,128.9912104'>부산광역시 사상구청</option>
+<option value='대구광역시 중구청,35.8693036,128.6062139'>대구광역시 중구청</option>
+<option value='대구광역시 동구청,35.8865747,128.6354972'>대구광역시 동구청</option>
+<option value='대구광역시 서구청,35.8718121,128.5591803'>대구광역시 서구청</option>
+<option value='대구광역시 남구청,35.8459661,128.5976893'>대구광역시 남구청</option>
+<option value='대구광역시 북구청,35.8857242,128.5828252'>대구광역시 북구청</option>
+<option value='대구광역시 수성구청,35.8582083,128.6307534'>대구광역시 수성구청</option>
+<option value='대구광역시 달서구청,35.8299032,128.5328209'>대구광역시 달서구청</option>
+<option value='대구광역시 달성군청,35.7746432,128.4314926'>대구광역시 달성군청</option>
+<option value='인천광역시 중구청,37.4737134,126.6215430'>인천광역시 중구청</option>
+<option value='인천광역시 동구청,37.4738299,126.6432807'>인천광역시 동구청</option>
+<option value='인천광역시 미추홀구청,37.4635968,126.6505869'>인천광역시 미추홀구청</option>
+<option value='인천광역시 연수구청,37.4101820,126.6783276'>인천광역시 연수구청</option>
+<option value='인천광역시 남동구청,37.4473570,126.7316373'>인천광역시 남동구청</option>
+<option value='인천광역시 부평구청,37.5069880,126.7216826'>인천광역시 부평구청</option>
+<option value='인천광역시 계양구청,37.5371010,126.7376770'>인천광역시 계양구청</option>
+<option value='인천광역시 서구청,37.5453726,126.6760009'>인천광역시 서구청</option>
+<option value='인천광역시 강화군청,37.7474492,126.4873795'>인천광역시 강화군청</option>
+<option value='인천광역시 옹진군청,37.4466075,126.6367997'>인천광역시 옹진군청</option>
+<option value='광주광역시 동구청,35.1460834,126.9231169'>광주광역시 동구청</option>
+<option value='광주광역시 서구청,35.1515993,126.8900866'>광주광역시 서구청</option>
+<option value='광주광역시 남구청,35.1328277,126.9024220'>광주광역시 남구청</option>
+<option value='광주광역시 북구청,35.1741262,126.9120986'>광주광역시 북구청</option>
+<option value='광주광역시 광산구청,35.1395549,126.7936861'>광주광역시 광산구청</option>
+<option value='대전광역시 동구청,36.3118844,127.4548329'>대전광역시 동구청</option>
+<option value='대전광역시 중구청,36.3257326,127.4213789'>대전광역시 중구청</option>
+<option value='대전광역시 서구청,36.3554115,127.3837002'>대전광역시 서구청</option>
+<option value='대전광역시 유성구청,36.3622875,127.3562679'>대전광역시 유성구청</option>
+<option value='대전광역시 대덕구청,36.3467307,127.4156310'>대전광역시 대덕구청</option>
+<option value='울산광역시 중구청,35.5693740,129.3325578'>울산광역시 중구청</option>
+<option value='울산광역시 남구청,35.5437949,129.3301275'>울산광역시 남구청</option>
+<option value='울산광역시 동구청,35.5048110,129.4166382'>울산광역시 동구청</option>
+<option value='울산광역시 북구청,35.5825993,129.3612974'>울산광역시 북구청</option>
+<option value='울산광역시 울주군청,35.5338397,129.2949652'>울산광역시 울주군청</option>
+<option value='경기도 수원시청,37.2633420,127.0284821'>경기도 수원시청</option>
+<option value='경기도 성남시청,37.4199117,127.1265362'>경기도 성남시청</option>
+<option value='경기도 의정부시청,37.7380596,127.0339070'>경기도 의정부시청</option>
+<option value='경기도 안양시청,37.3942353,126.9569219'>경기도 안양시청</option>
+<option value='경기도 광명시청,37.4785440,126.8647252'>경기도 광명시청</option>
+<option value='경기도 평택시청,36.9922818,127.1126676'>경기도 평택시청</option>
+<option value='경기도 양주시청,37.7852257,127.0458496'>경기도 양주시청</option>
+<option value='경기도 동두천시청,37.9035900,127.0604019'>경기도 동두천시청</option>
+<option value='경기도 안산시청,37.3219087,126.8308574'>경기도 안산시청</option>
+<option value='경기도 고양시청,37.6585131,126.8322062'>경기도 고양시청</option>
+<option value='경기도 과천시청,37.4291929,126.9876218'>경기도 과천시청</option>
+<option value='경기도 의왕시청,37.3448216,126.9683051'>경기도 의왕시청</option>
+<option value='경기도 구리시청,37.5943248,127.1296201'>경기도 구리시청</option>
+<option value='경기도 남양주시청,37.6359754,127.2163998'>경기도 남양주시청</option>
+<option value='경기도 오산시청,37.1498895,127.0775082'>경기도 오산시청</option>
+<option value='경기도 화성시청,37.1995402,126.8314520'>경기도 화성시청</option>
+<option value='경기도 시흥시청,37.3800616,126.8028110'>경기도 시흥시청</option>
+<option value='경기도 군포시청,37.3616209,126.9351349'>경기도 군포시청</option>
+<option value='경기도 하남시청,37.5392557,127.2148670'>경기도 하남시청</option>
+<option value='경기도 파주시청,37.7601397,126.7799719'>경기도 파주시청</option>
+<option value='경기도 여주시청,37.2982480,127.6372247'>경기도 여주시청</option>
+<option value='경기도 이천시청,37.2721795,127.4350079'>경기도 이천시청</option>
+<option value='경기도 용인시청,37.2410452,127.1778918'>경기도 용인시청</option>
+<option value='경기도 안성시청,37.0080298,127.2797823'>경기도 안성시청</option>
+<option value='경기도 김포시청,37.6152698,126.7156628'>경기도 김포시청</option>
+<option value='경기도 광주시청,37.4294606,127.2551889'>경기도 광주시청</option>
+<option value='경기도 포천시청,37.8949835,127.2003823'>경기도 포천시청</option>
+<option value='경기도 연천군청,38.0966762,127.0748882'>경기도 연천군청</option>
+<option value='경기도 양평군청,37.4916906,127.4876058'>경기도 양평군청</option>
+<option value='경기도 가평군청,37.8313267,127.5095656'>경기도 가평군청</option>
+<option value='경기도 부천시청,37.5035253,126.7663360'>경기도 부천시청</option>
+<option value='강원도 춘천시청,37.8812707,127.7301589'>강원도 춘천시청</option>
+<option value='강원도 원주시청,37.3417057,127.9198011'>강원도 원주시청</option>
+<option value='강원도 강릉시청,37.7521083,128.8759140'>강원도 강릉시청</option>
+<option value='강원도 동해시청,37.5246958,129.1143895'>강원도 동해시청</option>
+<option value='강원도 삼척시청,37.4499333,129.1651660'>강원도 삼척시청</option>
+<option value='강원도 태백시청,37.1640860,128.9857736'>강원도 태백시청</option>
+<option value='강원도 정선군청,37.3806437,128.6608265'>강원도 정선군청</option>
+<option value='강원도 속초시청,38.2070876,128.5919317'>강원도 속초시청</option>
+<option value='강원도 고성군청,38.3805410,128.4677959'>강원도 고성군청</option>
+<option value='강원도 양양군청,38.0753888,128.6188617'>강원도 양양군청</option>
+<option value='강원도 인제군청,38.0697586,128.1704440'>강원도 인제군청</option>
+<option value='강원도 홍천군청,37.6968234,127.8886894'>강원도 홍천군청</option>
+<option value='강원도 횡성군청,37.4918727,127.9848921'>강원도 횡성군청</option>
+<option value='강원도 영월군청,37.1836785,128.4615857'>강원도 영월군청</option>
+<option value='강원도 평창군청,37.3707536,128.3902223'>강원도 평창군청</option>
+<option value='강원도 화천군청,38.1060912,127.7082276'>강원도 화천군청</option>
+<option value='강원도 양구군청,38.1099579,127.9899656'>강원도 양구군청</option>
+<option value='강원도 철원군청,38.1467570,127.3133729'>강원도 철원군청</option>
+<option value='충청북도 청주시청,36.6424708,127.4889361'>충청북도 청주시청</option>
+<option value='충청북도 충주시청,36.9910782,127.9259338'>충청북도 충주시청</option>
+<option value='충청북도 제천시청,37.1326265,128.1909196'>충청북도 제천시청</option>
+<option value='충청북도 단양군청,36.9846622,128.3657978'>충청북도 단양군청</option>
+<option value='충청북도 영동군청,36.1750093,127.7834397'>충청북도 영동군청</option>
+<option value='충청북도 보은군청,36.4894661,127.7295183'>충청북도 보은군청</option>
+<option value='충청북도 옥천군청,36.3066628,127.5713085'>충청북도 옥천군청</option>
+<option value='충청북도 음성군청,36.9402868,127.6904813'>충청북도 음성군청</option>
+<option value='충청북도 진천군청,36.8553690,127.4354664'>충청북도 진천군청</option>
+<option value='충청북도 괴산군청,36.8152798,127.7866151'>충청북도 괴산군청</option>
+<option value='충청북도 증평군청,36.7854020,127.5816872'>충청북도 증평군청</option>
+<option value='충청남도 공주시청,36.4465880,127.1190337'>충청남도 공주시청</option>
+<option value='충청남도 보령시청,36.3334575,126.6128138'>충청남도 보령시청</option>
+<option value='충청남도 아산시청,36.7900744,127.0024578'>충청남도 아산시청</option>
+<option value='충청남도 서산시청,36.7849639,126.4503080'>충청남도 서산시청</option>
+<option value='충청남도 태안군청,36.7457378,126.2979000'>충청남도 태안군청</option>
+<option value='충청남도 금산군청,36.1088033,127.4879169'>충청남도 금산군청</option>
+<option value='충청남도 논산시청,36.1871615,127.0987563'>충청남도 논산시청</option>
+<option value='충청남도 계룡시청,36.2745276,127.2486907'>충청남도 계룡시청</option>
+<option value='충청남도 부여군청,36.2757759,126.9098263'>충청남도 부여군청</option>
+<option value='충청남도 서천군청,36.0802290,126.6913276'>충청남도 서천군청</option>
+<option value='충청남도 홍성군청,36.6013552,126.6608519'>충청남도 홍성군청</option>
+<option value='충청남도 청양군청,36.4591863,126.8022728'>충청남도 청양군청</option>
+<option value='충청남도 예산군청,36.6827294,126.8487945'>충청남도 예산군청</option>
+<option value='충청남도 당진시청,36.8895433,126.6455811'>충청남도 당진시청</option>
+<option value='충청남도 천안시청,36.8150071,127.1136757'>충청남도 천안시청</option>
+<option value='전라북도 전주시청,35.8241893,127.1480642'>전라북도 전주시청</option>
+<option value='전라북도 군산시청,35.9676114,126.7368142'>전라북도 군산시청</option>
+<option value='전라북도 익산시청,35.9482822,126.9576043'>전라북도 익산시청</option>
+<option value='전라북도 정읍시청,35.5698431,126.8561398'>전라북도 정읍시청</option>
+<option value='전라북도 남원시청,35.4164123,127.3904374'>전라북도 남원시청</option>
+<option value='전라북도 김제시청,35.8035892,126.8803248'>전라북도 김제시청</option>
+<option value='전라북도 완주군청,35.9047350,127.1616367'>전라북도 완주군청</option>
+<option value='전라북도 진안군청,35.7919688,127.4246980'>전라북도 진안군청</option>
+<option value='전라북도 무주군청,36.0071019,127.6607690'>전라북도 무주군청</option>
+<option value='전라북도 장수군청,35.6473832,127.5211573'>전라북도 장수군청</option>
+<option value='전라북도 임실군청,35.6182149,127.2891862'>전라북도 임실군청</option>
+<option value='전라북도 순창군청,35.3742834,127.1376647'>전라북도 순창군청</option>
+<option value='전라북도 고창군청,35.4357798,126.7019715'>전라북도 고창군청</option>
+<option value='전라북도 부안군청,35.7317232,126.7333983'>전라북도 부안군청</option>
+<option value='전라남도 목포시청,34.8119080,126.3924183'>전라남도 목포시청</option>
+<option value='전라남도 여수시청,34.7604424,127.6622449'>전라남도 여수시청</option>
+<option value='전라남도 순천시청,34.9506104,127.4873730'>전라남도 순천시청</option>
+<option value='전라남도 나주시청,35.0158355,126.7108229'>전라남도 나주시청</option>
+<option value='전라남도 광양시청,34.9406743,127.6959809'>전라남도 광양시청</option>
+<option value='전라남도 담양군청,35.3211780,126.9881180'>전라남도 담양군청</option>
+<option value='전라남도 장성군청,35.3018199,126.7848504'>전라남도 장성군청</option>
+<option value='전라남도 곡성군청,35.2820105,127.2920265'>전라남도 곡성군청</option>
+<option value='전라남도 구례군청,35.2025645,127.4628309'>전라남도 구례군청</option>
+<option value='전라남도 고흥군청,34.6112298,127.2850227'>전라남도 고흥군청</option>
+<option value='전라남도 보성군청,34.7714984,127.0800194'>전라남도 보성군청</option>
+<option value='전라남도 화순군청,35.0645848,126.9865036'>전라남도 화순군청</option>
+<option value='전라남도 장흥군청,34.6817356,126.9070227'>전라남도 장흥군청</option>
+<option value='전라남도 강진군청,34.6420810,126.7671566'>전라남도 강진군청</option>
+<option value='전라남도 완도군청,34.3110382,126.7549163'>전라남도 완도군청</option>
+<option value='전라남도 해남군청,34.5734626,126.5991969'>전라남도 해남군청</option>
+<option value='전라남도 진도군청,34.4869518,126.2635726'>전라남도 진도군청</option>
+<option value='전라남도 영암군청,34.8000993,126.6968375'>전라남도 영암군청</option>
+<option value='전라남도 무안군청,34.9904529,126.4816815'>전라남도 무안군청</option>
+<option value='전라남도 영광군청,35.2771932,126.5120257'>전라남도 영광군청</option>
+<option value='전라남도 함평군청,35.0659038,126.5165504'>전라남도 함평군청</option>
+<option value='전라남도 신안군청,34.8334346,126.3514873'>전라남도 신안군청</option>
+<option value='경상북도 포항시청,36.0188796,129.3431357'>경상북도 포항시청</option>
+<option value='경상북도 울릉군청,37.4845018,130.9055922'>경상북도 울릉군청</option>
+<option value='경상북도 경주시청,35.8565048,129.2248540'>경상북도 경주시청</option>
+<option value='경상북도 김천시청,36.1398207,128.1136717'>경상북도 김천시청</option>
+<option value='경상북도 안동시청,36.5684077,128.7296346'>경상북도 안동시청</option>
+<option value='경상북도 구미시청,36.1195508,128.3445140'>경상북도 구미시청</option>
+<option value='경상북도 영주시청,36.8056695,128.6240029'>경상북도 영주시청</option>
+<option value='경상북도 영천시청,35.9732390,128.9386117'>경상북도 영천시청</option>
+<option value='경상북도 상주시청,36.4109520,128.1591562'>경상북도 상주시청</option>
+<option value='경상북도 문경시청,36.5865267,128.1867834'>경상북도 문경시청</option>
+<option value='경상북도 예천군청,36.6577021,128.4529344'>경상북도 예천군청</option>
+<option value='경상북도 경산시청,35.8250759,128.7412856'>경상북도 경산시청</option>
+<option value='경상북도 청도군청,35.6474678,128.7341421'>경상북도 청도군청</option>
+<option value='경상북도 고령군청,35.7260968,128.2628268'>경상북도 고령군청</option>
+<option value='경상북도 성주군청,35.9191173,128.2829767'>경상북도 성주군청</option>
+<option value='경상북도 칠곡군청,35.9955169,128.4015816'>경상북도 칠곡군청</option>
+<option value='경상북도 군위군청,36.2429797,128.5729159'>경상북도 군위군청</option>
+<option value='경상북도 의성군청,36.3527229,128.6971782'>경상북도 의성군청</option>
+<option value='경상북도 청송군청,36.4362543,129.0571155'>경상북도 청송군청</option>
+<option value='경상북도 영양군청,36.6667240,129.1124093'>경상북도 영양군청</option>
+<option value='경상북도 영덕군청,36.4150679,129.3660926'>경상북도 영덕군청</option>
+<option value='경상북도 봉화군청,36.8931474,128.7326800'>경상북도 봉화군청</option>
+<option value='경상북도 울진군청,36.9930668,129.4005475'>경상북도 울진군청</option>
+<option value='경상남도 진주시청,35.1801176,128.1075438'>경상남도 진주시청</option>
+<option value='경상남도 통영시청,34.8543637,128.4330956'>경상남도 통영시청</option>
+<option value='경상남도 고성군청,34.9730349,128.3222647'>경상남도 고성군청</option>
+<option value='경상남도 사천시청,35.0034643,128.0642560'>경상남도 사천시청</option>
+<option value='경상남도 김해시청,35.2285859,128.8894421'>경상남도 김해시청</option>
+<option value='경상남도 밀양시청,35.5038147,128.7466333'>경상남도 밀양시청</option>
+<option value='경상남도 거제시청,34.8804575,128.6211358'>경상남도 거제시청</option>
+<option value='경상남도 의령군청,35.3222083,128.2617003'>경상남도 의령군청</option>
+<option value='경상남도 함안군청,35.2724921,128.4064781'>경상남도 함안군청</option>
+<option value='경상남도 창녕군청,35.5445648,128.4922603'>경상남도 창녕군청</option>
+<option value='경상남도 양산시청,35.3350409,129.0374212'>경상남도 양산시청</option>
+<option value='경상남도 하동군청,35.0673110,127.7513310'>경상남도 하동군청</option>
+<option value='경상남도 남해군청,34.8373459,127.8923036'>경상남도 남해군청</option>
+<option value='경상남도 함양군청,35.5203692,127.7251672'>경상남도 함양군청</option>
+<option value='경상남도 산청군청,35.4156758,127.8734812'>경상남도 산청군청</option>
+<option value='경상남도 거창군청,35.6867172,127.9095806'>경상남도 거창군청</option>
+<option value='경상남도 합천군청,35.5666198,128.1658205'>경상남도 합천군청</option>
+<option value='경상남도 창원시청,35.2279599,128.6817216'>경상남도 창원시청</option>
+
+</select>
+</form>
+</p> 
+<div id="map" style="width:700px;height:600px;"></div>
+<div id="info" style="width:600px;height:200px;"></div>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=53c0e64ce43ad2b231e0a3151278da65"></script>
+<script>
+var marker;
+var infowindow;
+function myFunction() {
+	const map1 = new Map();
+	
+map1.set("서울특별시청", "5,1100000000,광역지방자치단체,서울특별시,,-,seoul.go.kr,https://event.seoul.go.kr/seoulsibo/list.do,X,O,X,PDF,O,O,1953.6.,,O,재산/공직자윤리위원회,,");
+map1.set("부산광역시청", "6,2600000000,광역지방자치단체,부산광역시,,클루,busan.go.kr,https://www.busan.go.kr/news/gosiboard?articlNo=2,O,O(목록 별도로 제공),X,PDF,O,O,2000.1.,,O,공직자재산등록사항 공개,,");
+map1.set("대구광역시청", "7,2700000000,광역지방자치단체,대구광역시,,클루,daegu.go.kr,https://info.daegu.go.kr/newshome/mtnmain.php?mtnkey=scatelist&mkey=27,X,O,X,PDF,O,X(검색기능 없음),494호/2003.12.10,,X,X,,");
+map1.set("인천광역시청", "8,2800000000,광역지방자치단체,인천광역시,,-,incheon.go.kr,https://www.incheon.go.kr/IC010303,X,O,X,PDF,O,X,1호 / 1990,,O,재산등록사항,초반 연도에는 pdf 파일 첨부되지 않음,");
+map1.set("광주광역시청", "9,2900000000,광역지방자치단체,광주광역시,,클루,gwangju.go.kr,http://news.gwangju.go.kr/article.es?mid=a10804000000&bid=0021,X,X(목록 아예 없음),X,PDF(다단 PDF),O,X,제174호/2006-03-15,,X,X,,");
+map1.set("대전광역시청", "10,3000000000,광역지방자치단체,대전광역시,,유경민,daejeon.go.kr,https://www.daejeon.go.kr/drh/drhRegulationsList.do?menuSeq=1660,O,O,X,PDF,O,X,제696호 2002.2.21.,,X,X,유형별로 PDF파일을 분리해서 제공 (통합 PDF 파일 없음),");
+map1.set("울산광역시청", "11,3100000000,광역지방자치단체,울산광역시,,유경민,ulsan.go.kr,https://www.ulsan.go.kr/u/rep/transfer/report/list.ulsan?mId=001004004000000000,X,X,X,PDF,X,X,제387호 2002.12.12.,,X,X,공보 게시판에서 제목을 클릭하면 바로 PDF 파일 다운로드,");
+map1.set("세종특별자치시청", "12,3611000000,광역지방자치단체,세종특별자치시,,유경민,sejong.go.kr,https://www.sejong.go.kr/prog/sjSibo/list.do?mno=sub02_0204,X,X,X,PDF,O,X,제1호 2012.7.2.,,X,X,시보 게시판에서 제목을 클릭하면 바로 PDF 뷰어만 뜸,");
+map1.set("경기도청", "13,4100000000,광역지방자치단체,경기도,,클루,gg.go.kr,https://www.gg.go.kr/bbs/board.do?bsIdx=769&menuId=1786#page=1#ck00=1,△(카테고리만),O,X,PDF,O,O,3014호/2002-01-02,,O,재산등록사항,재산이 공고아님('그밖에' 카테고리),");
+map1.set("강원도청", "14,4200000000,광역지방자치단체,강원도,,클루,provin.gangwon.kr,https://www.provin.gangwon.kr/gw/portal/sub05_06,△(카테고리만),O,X,HWP,O(HWP),X,3795호/2000-09-02,,O,재산등록사항,,");
+map1.set("충청북도청", "15,4300000000,광역지방자치단체,충청북도,,클루,chungbuk.go.kr,https://www.chungbuk.go.kr/cblib/selectBbsNttList.do?bbsNo=203&key=1485,X,O,X,PDF,X,X,2169호/2001.11.2,,O,공직자윤리위원회공고,'파일 제목은 OCR인데, 그림 PDF',");
+map1.set("충청남도청", "16,4400000000,광역지방자치단체,충청남도,,클루,chungnam.go.kr,http://www.chungnam.go.kr:8100/cnnet/dobo/list.do?mnu_cd=CNNMENU00149&page_gb=20,△(카테고리만),O,X,PDF,X,O,제1835호/2004.10.30,,O,공직자윤리위원회(기타 카테고리),'재산은 암호화된 텍스트, 다른 항목은 벡터 이미지로 공개',");
+map1.set("전라북도청", "17,4500000000,광역지방자치단체,전라북도,,달로스,jeonbuk.go.kr,https://www.jeonbuk.go.kr/board/list.jeonbuk?boardId=BBS_0000037&menuCd=DOM_000000106005005000&contentsSid=162&cpath=,,,,PDF,X,,제1980호(2005,,,,,");
+map1.set("전라남도청", "18,4600000000,광역지방자치단체,전라남도,,유경민,jeonnam.go.kr,https://www.jeonnam.go.kr/J0204/boardList.do?menuId=jeonnam0204000000,X,O,X,PDF,O,X,제1534호 1983.1.4.,,O,재산변동,,");
+map1.set("경상북도청", "19,4700000000,광역지방자치단체,경상북도,,유경민,gb.go.kr,https://www.gb.go.kr/Main/page.do?mnu_uid=6791&LARGE_CODE=720&MEDIUM_CODE=50&SMALL_CODE=10&SMALL_CODE2=50&,X,O,X,PDF,O,X,제4431호 2000.05.26.,,O,재산등록사항,,");
+map1.set("경상남도청", "20,4800000000,광역지방자치단체,경상남도,,유경민,gyeongnam.go.kr,https://www.gyeongnam.go.kr/board/list.gyeong?boardId=BBS_0000300&menuCd=DOM_000000104001004001&contentsSid=1675&cpath=,X,X,X,PDF,O,X,제1995호 2012.1.5.,,X,X,PDF파일 다운로드 기능만 제공,");
+map1.set("제주특별자치도청", "21,5000000000,광역지방자치단체,제주특별자치도,,권오현,jeju.go.kr,http://www.jeju.go.kr/news/online/list/2014.htm,X,O,X,PDF,O,X,267호 / 1976.1.,,O,재산등록사항,,");
+map1.set("서울특별시 종로구청", "22,1111000000,기초지방자치단체,종로구,서울특별시,권오현,jongno.go.kr,https://www.jongno.go.kr/portal/bbs/selectBoardList.do?bbsId=BBSMSTR_000000000402&menuId=1819&menuNo=1819,X,O,X,PDF,O,X,650호 / 2004.1.,,O,재산등록사항,,");
+map1.set("서울특별시 중구청", "23,1114000000,기초지방자치단체,중구,서울특별시,권오현,junggu.seoul.kr,http://www.junggu.seoul.kr/content.do?cmsid=14234,X,O,X,PDF,O,X,1430호 / 2005.7.,,X,,재산공개 없음(중구 시설관리공단 이사장은 재산공개 대상: https://www.peti.go.kr/pldRltnGrop.do ),");
+map1.set("서울특별시 용산구청", "24,1117000000,기초지방자치단체,용산구,서울특별시,권오현,yongsan.go.kr,http://www.yongsan.go.kr/portal/bbs/B0000047/list.do?menuNo=200235,X,X,X,PDF,O,X,1022호 / 2004.12.,,X,,파일만 제공함,");
+map1.set("서울특별시 성동구청", "25,1120000000,기초지방자치단체,성동구,서울특별시,권오현,sd.go.kr,https://www.sd.go.kr/main/selectBbsNttList.do?bbsNo=170&key=1321&,X,O,X,PDF,O,X,906호 / 2005.2.,,X,,,");
+map1.set("서울특별시 광진구청", "26,1121500000,기초지방자치단체,광진구,서울특별시,권오현,gwangjin.go.kr,https://www.gwangjin.go.kr/portal/bbs/B0000008/list.do?menuNo=200211,X,O,X,HWP/PDF,O,X,614호 / 2004.3.,,X,,,");
+map1.set("서울특별시 동대문구청", "27,1123000000,기초지방자치단체,동대문구,서울특별시,권오현,ddm.go.kr,https://www.ddm.go.kr/www/selectBbsNttList.do?bbsNo=53&key=239,X,X,X,PDF/HWP,O,X,1370호 / 2004.10.,,X,,,");
+map1.set("서울특별시 중랑구청", "28,1126000000,기초지방자치단체,중랑구,서울특별시,권오현,jungnang.go.kr,https://www.jungnang.go.kr/portal/bbs/list/B0000120.do?menuNo=200480,X,O,X,PDF/XLS/ZIP,O,X,1065호 / 2003.11.,,X,,자료를 첨부파일로 제공함.,");
+map1.set("서울특별시 성북구청", "29,1129000000,기초지방자치단체,성북구,서울특별시,권오현,seongbuk.go.kr,https://www.sb.go.kr/PageLink.do (자바스크립트 링크),'O (7) (제목,작성자,등록일,조회수,공공저작물 대상여부,첨부파일)',O,X,PDF,X,X,1698,2010-01-05,,,검색기능 없음,");
+map1.set("서울특별시 강북구청", "30,1130500000,기초지방자치단체,강북구,서울특별시,권오현,gangbuk.go.kr,https://www.gangbuk.go.kr/www/boardList.do?boardSeq=44&key=288,X,O,X,PDF,O,X,439호 / 2007.11.,,X,,,");
+map1.set("서울특별시 도봉구청", "31,1132000000,기초지방자치단체,도봉구,서울특별시,권오현,dobong.go.kr,https://www.dobong.go.kr/Contents.asp?code=10004130,X,O,X,PDF,O,X,1221호 / 2004.3.,,검색불가,,RSS를 제공,");
+map1.set("서울특별시 노원구청", "32,1135000000,기초지방자치단체,노원구,서울특별시,권오현,nowon.kr,https://www.nowon.kr/www/user/bbs/BD_selectBbsList.do?q_bbsCode=1020,X,O,X,PDF,O,X,1240호 / 2011.1.,,X,,,");
+map1.set("서울특별시 은평구청", "33,1138000000,기초지방자치단체,은평구,서울특별시,권오현,ep.go.kr,https://www.ep.go.kr/www/selectBbsNttList.do?bbsNo=47&key=757,X,O,X,PDF,O,X,879호부터 목록에 있으나 내용이 없음,,X,,,");
+map1.set("서울특별시 서대문구청", "34,1141000000,기초지방자치단체,서대문구,서울특별시,권오현,sdm.go.kr,https://www.sdm.go.kr/news/notice/report.do,X,X,X,PDF,O,,1498호 / 2005.12,,X,,,");
+map1.set("서울특별시 마포구청", "35,1144000000,기초지방자치단체,마포구,서울특별시,황서원,mapo.go.kr,https://www.mapo.go.kr/site/main/board/gubo/list,'△(작성자, 작성일)',O,O,PDF,O,X,1898호,2019.12.12,,,점자 제공,");
+map1.set("서울특별시 양천구청", "36,1147000000,기초지방자치단체,양천구,서울특별시,권오현,yangcheon.go.kr,https://www.yangcheon.go.kr/site/yangcheon/ex/bbs/List.do?cbIdx=322,X,X,X,PDF,O,X,868호 / 2002.3.,,X,,이전엔 목록을 내용에 적었으나 현재는 기재하지 않음,");
+map1.set("서울특별시 강서구청", "37,1150000000,기초지방자치단체,강서구,서울특별시,권오현,gangseo.seoul.kr,https://www.gangseo.seoul.kr/gs040401,X,O,X,PDF/HWP,O,X,1466호 / 2012.1.,,X,,,");
+map1.set("서울특별시 구로구청", "38,1153000000,기초지방자치단체,구로구,서울특별시,권오현,guro.go.kr,http://guro.go.kr/www/selectBbsNttList.do?bbsNo=667&key=1795&,X,O,X,PDF/HWP,O,X,705호 / 2001.11.,,X,,,");
+map1.set("서울특별시 금천구청", "39,1154500000,기초지방자치단체,금천구,서울특별시,권오현,geumcheon.go.kr,https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=106&key=298,X,O,X,PDF,O,X,659호 / 2003.7.,,X,,,");
+map1.set("서울특별시 영등포구청", "40,1156000000,기초지방자치단체,영등포구,서울특별시,권오현,ydp.go.kr,https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=34&key=2824&,X,O,X,PDF,O,X,873호 / 2004.3.,,X,,,");
+map1.set("서울특별시 동작구청", "41,1159000000,기초지방자치단체,동작구,서울특별시,권오현,dongjak.go.kr,https://www.dongjak.go.kr/portal/bbs/B0000031/list.do?menuNo=200110,X,O,X,PDF,O,X,1157호 / 2011.7.,,X,,,");
+map1.set("서울특별시 관악구청", "42,1162000000,기초지방자치단체,관악구,서울특별시,오원석,www.gwanak.go.kr,https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=290,X,O,O,PDF,O,X,901호,2005.04.18,X,X,,");
+map1.set("서울특별시 서초구청", "43,1165000000,기초지방자치단체,서초구,서울특별시,권오현,seocho.go.kr,https://www.seocho.go.kr/site/seocho/ex/bbs/List.do?cbIdx=56,X,O,X,PDF,O,X,1096호 / 2003.9.,,X,,,");
+map1.set("서울특별시 강남구청", "44,1168000000,기초지방자치단체,강남구,서울특별시,권오현,gangnam.go.kr,https://www.gangnam.go.kr/board/B_000068/list.do?mid=ID05_0411,X,X,X,PDF,O,X,448호,2000.08.17,X,,,");
+map1.set("서울특별시 송파구청", "45,1171000000,기초지방자치단체,송파구,서울특별시,오원석,songpa.go.kr,https://www.songpa.go.kr/book/selectBbsNttList.do?bbsNo=153&key=3770&,X,X,X,PDF,O,X,914호,2007.05.28,X,X,,");
+map1.set("서울특별시 강동구청", "46,1174000000,기초지방자치단체,강동구,서울특별시,오원석,gangdong.go.kr,https://www.gangdong.go.kr/web/newportal/bbs/b_074,X,X,O,PDF,O,X,691호,2004.06.23,X,X,'점자, 음성 등 지원',");
+map1.set("부산광역시 중구청", "47,2611000000,기초지방자치단체,중구,부산광역시,서울특별시 강동구 공무원 정원,bsjunggu.go.kr,http://www.bsjunggu.go.kr/board/view.junggu?boardId=BBS_0000019&menuCd=DOM_000000103003002000&paging=ok&startPage=1&dataSid=216496,X,X,X,PDF,O,X,제110호(2011.1.31),,X,X,전자공보,");
+map1.set("부산광역시 서구청", "48,2614000000,기초지방자치단체,서구,부산광역시,바른생활,bsseogu.go.kr,https://www.bsseogu.go.kr/board/list.bsseogu?boardId=BBS_0000012&menuCd=DOM_000000103001006000&contentsSid=85&cpath=,X,X,X,PDF,O,X,제319호(2009.12.2),,X,X,서구공보,");
+map1.set("부산광역시 동구청", "49,2617000000,기초지방자치단체,동구,부산광역시,바른생활,bsdonggu.go.kr,http://www.bsdonggu.go.kr/board/list.donggu?boardId=BBS_0000024&menuCd=DOM_000000103001005000&startPage=1,X,O,X,PDF,O,X,제198호(2007.7.9),,X,X,동구구보,");
+map1.set("부산광역시 영도구청", "50,2620000000,기초지방자치단체,영도구,부산광역시,바른생활,yeongdo.go.kr,https://www.yeongdo.go.kr/00000/02293/00016.web,X,O,X,PDF,O,X,제285호(2009.7.30),,X,X,전자구보,");
+map1.set("부산광역시 부산진구청", "51,2623000000,기초지방자치단체,부산진구,부산광역시,바른생활,busanjin.go.kr,https://www.busanjin.go.kr/board/list.busanjin?boardId=BBS_0000032&menuCd=DOM_000000110004001000&contentsSid=3043&cpath=,X,O,X,PDF,O,X,제331호(2009.11.24),,X,X,부산진구공보,");
+map1.set("부산광역시 동래구청", "52,2626000000,기초지방자치단체,동래구,부산광역시,바른생활,dongnae.go.kr,https://www.dongnae.go.kr/board/list.dongnae?boardId=BBS_0000022&menuCd=DOM_000000103002000000&contentsSid=37&cpath=,X,O,X,PDF,O,X,제139호(2008.2.11),,X,X,동래공보,");
+map1.set("부산광역시 남구청", "53,2629000000,기초지방자치단체,남구,부산광역시,바른생활,bsnamgu.go.kr,https://www.bsnamgu.go.kr/board/list.namgu?boardId=BBS_0000003&menuCd=DOM_000000105001005000&contentsSid=140&cpath=,X,X,X,HWP/PDF,O,X,제105호(2007.10.15),,X,X,남구공보,");
+map1.set("부산광역시 북구청", "54,2632000000,기초지방자치단체,북구,부산광역시,바른생활,bsbukgu.go.kr,https://www.bsbukgu.go.kr/board/list.bsbukgu?boardId=BBS_0000025&menuCd=DOM_000000105001003000&contentsSid=370&cpath=,X,X,X,PDF,O,X,제116호(2007.9..),,X,X,'북구공보, 최초 발행 파일들은 오류가 있어 정확한 날짜 확인 불가.',");
+map1.set("부산광역시 해운대구청", "55,2635000000,기초지방자치단체,해운대구,부산광역시,바른생활,haeundae.go.kr,'???? 고시공고는 있는데, 구보/전자구보 같은 것은 안보임 http://www.haeundae.go.kr/index.do?menuCd=DOM_000000104001002000',,,,,,,,,,,,");
+map1.set("부산광역시 기장군청", "56,2671000000,기초지방자치단체,기장군,부산광역시,바른생활,gijang.go.kr,https://www.gijang.go.kr/board/list.gijang?boardId=BBS_0000004&menuCd=DOM_000000101001006000&contentsSid=49&cpath=,X,X,X,HWP/XLS,O,X,제2017-116호(2017.5.31),,X,X,군정공보,");
+map1.set("부산광역시 사하구청", "57,2638000000,기초지방자치단체,사하구,부산광역시,바른생활,saha.go.kr,https://saha.go.kr/portal/bbs/list.do?ptIdx=32&mId=0303070000,X,X,X,PDF,O,X,제168호(2007.2.12),,X,X,사하구공보,");
+map1.set("부산광역시 금정구청", "58,2641000000,기초지방자치단체,금정구,부산광역시,바른생활,geumjeong.go.kr,???? 고시공고만 보이고 구보는 못찾겠음... https://www.geumjeong.go.kr/board/list.geumj?boardId=BBS_0000006&menuCd=DOM_000000124002003000&contentsSid=3857&cpath=,,,,,,,,,,,,");
+map1.set("부산광역시 강서구청", "59,2644000000,기초지방자치단체,강서구,부산광역시,바른생활,bsgangseo.go.kr,https://www.bsgangseo.go.kr/news/list.do?nsCode=008&mId=0705000000,,,,,,,,,,,강서구보,");
+map1.set("부산광역시 연제구청", "60,2647000000,기초지방자치단체,연제구,부산광역시,바른생활,yeonje.go.kr,https://www.yeonje.go.kr/portal/bbs/list.do?ptIdx=13&mId=0206060000,,,,,,,,,,,연제공보,");
+map1.set("부산광역시 수영구청", "61,2650000000,기초지방자치단체,수영구,부산광역시,바른생활,suyeong.go.kr,https://www.suyeong.go.kr/board/list.suyeong?boardId=BBS_0000111&menuCd=DOM_000000103001007000&contentsSid=227,,,,,,,,,,,'새수영호외, 왜 호외로 되어 있지??? ',");
+map1.set("부산광역시 사상구청", "62,2653000000,기초지방자치단체,사상구,부산광역시,바른생활,sasang.go.kr,??? 구보라는 것이 있는데 잡지같은 형식으로 되어 있음.  https://www.suyeong.go.kr/board/list.suyeong?boardId=BBS_0000111&menuCd=DOM_000000103001007000&contentsSid=227,,,,,,,,,,,,");
+map1.set("대구광역시 중구청", "63,2711000000,기초지방자치단체,중구,대구광역시,클루,jung.daegu.kr,https://www.jung.daegu.kr/new/pages/administration/page.html?mc=0158,X,X,X,PDF,O,X,298,2003-12-29,,,,");
+map1.set("대구광역시 동구청", "64,2714000000,기초지방자치단체,동구,대구광역시,클루,dong.daegu.kr,https://dong.daegu.kr/main/page.htm?mnu_uid=3121&,X,O,X,PDF,O,X,519,2009-12-30,,,,");
+map1.set("대구광역시 서구청", "65,2717000000,기초지방자치단체,서구,대구광역시,클루,dgs.go.kr,https://www.dgs.go.kr/dgs/commu/page.php?mnu_uid=994,X,X,X,PDF,O,X,427,2008-10-31,,,,");
+map1.set("대구광역시 남구청", "66,2720000000,기초지방자치단체,남구,대구광역시,클루,nam.daegu.kr,https://nam.daegu.kr/index.do?menu_id=00000867,X,X,X,PDF,O,X,597,2012-01-09,,,,");
+map1.set("대구광역시 북구청", "67,2723000000,기초지방자치단체,북구,대구광역시,클루,buk.daegu.kr,https://www.buk.daegu.kr/index.do?menu_link=/icms/bbs/selectBoardArticle.do&menu_id=00002392&bbsId=BBSMSTR_000000001183&nttId=41221,X,X,X,PDF,O,X,321,2004-08-10,,,2008년 이전/이후 따로 제공. 과거 공보 날짜 태깅이 안됨.,");
+map1.set("대구광역시 수성구청", "68,2726000000,기초지방자치단체,수성구,대구광역시,클루,suseong.kr,https://www.suseong.kr/index.do?menu_id=00000068,X,O,X,PDF,O,O(기간 한정 가능),351,2005-04-19,,,,");
+map1.set("대구광역시 달서구청", "69,2729000000,기초지방자치단체,달서구,대구광역시,클루,dalseo.daegu.kr,https://dalseo.daegu.kr/index.do?menu_id=10000107,X,O,X,PDF,O,O(기간 한정 가능),361,2004-01-12,,,,");
+map1.set("대구광역시 달성군청", "70,2771000000,기초지방자치단체,달성군,대구광역시,클루,dalseong.daegu.kr,https://dalseong.daegu.kr/index.do?menu_id=00000201,X,X,X,PDF/ZIP,O,X,204,2003-06-03,,,,");
+map1.set("인천광역시 중구청", "71,2811000000,기초지방자치단체,중구,인천광역시,클루,icjg.go.kr,https://www.icjg.go.kr/krop0208b,X,O,X,PDF,O,X,106호/2004-12-21,,X(재산없음),X,재산공개 없음,");
+map1.set("인천광역시 동구청", "72,2814000000,기초지방자치단체,동구,인천광역시,클루,icdonggu.go.kr,https://www.icdonggu.go.kr/open_content/main/open_info/admin/word.jsp,X,X(2021년까지는 나옴),X,PDF,O,X,635호/2007.01.25,,X(재산없음),X,재산공개 없음,");
+map1.set("인천광역시 미추홀구청", "73,2817700000,기초지방자치단체,미추홀구,인천광역시,클루,www.michuhol.go.kr,https://www.michuhol.go.kr/main/board/list.do?board_code=board_84,X,O,X,PDF,O,X,664호/2008-03-28,,X(재산없음),X,재산공개 없음,");
+map1.set("인천광역시 연수구청", "74,2818500000,기초지방자치단체,연수구,인천광역시,클루,yeonsu.go.kr,https://www.yeonsu.go.kr/main/community/notify/word.asp,X,O,X,PDF,O,X,446호/2007.10.11	,,X(재산없음),X,재산공개 없음,");
+map1.set("인천광역시 남동구청", "75,2820000000,기초지방자치단체,남동구,인천광역시,클루,namdong.go.kr,https://www.namdong.go.kr/main/news/gazette.jsp,O,O,X,PDF,O,X,643호/2005.07.26,,O,재산등록사항,재산공개 있음(남동구도시관리공단 이사장),");
+map1.set("인천광역시 부평구청", "76,2823700000,기초지방자치단체,부평구,인천광역시,클루,icbp.go.kr,https://www.icbp.go.kr/main/participation/news/publication.jsp,X,O,X,PDF,O,X,737호/2008.11.17,,X(재산없음),X,재산공개 없음,");
+map1.set("인천광역시 계양구청", "77,2824500000,기초지방자치단체,계양구,인천광역시,클루,gyeyang.go.kr,https://www.gyeyang.go.kr/open_content/main/bbs/bbsMsgList.do?bcd=board_17&pgno=32,X,X,X,PDF,O,X(내용으로도 안됨),654호/2011.01.03,,X(재산없음),X,재산공개 없음,");
+map1.set("인천광역시 서구청", "78,2826000000,기초지방자치단체,서구,인천광역시,클루,seo.incheon.kr,https://seo.incheon.kr/open_content/main/community/news/word.jsp,X,X,X,PDF,O,X(내용으로도 안됨),684호/2009.03.10,,X(재산없음),X,재산공개 없음,");
+map1.set("인천광역시 강화군청", "79,2871000000,기초지방자치단체,강화군,인천광역시,클루,ganghwa.go.kr,https://www.ganghwa.go.kr/open_content/main/open_info/data/word.jsp,X,X,X,PDF,O,X(내용으로도 안됨),333호/2008.01.07,,X(재산없음),X,,");
+map1.set("인천광역시 옹진군청", "80,2872000000,기초지방자치단체,옹진군,인천광역시,클루,ongjin.go.kr,https://www.ongjin.go.kr/open_content/main/community/board/briefing.jsp,X,O,X,PDF,O,X,192호/2006.03.27,,X(재산없음),X,재산공개 없음,");
+map1.set("광주광역시 동구청", "81,2911000000,기초지방자치단체,동구,광주광역시,클루,donggu.kr,'고시공고 https://www.donggu.kr/menu.es?mid=a10101030100 입법예고 https://www.donggu.kr/menu.es?mid=a10101040100 구보는 잡지형태 발간',△(담당부서),O,△(일부),HWP,O,△(담당부서),2008-11-29,,X(재산없음),X,재산공개 없음,");
+map1.set("광주광역시 서구청", "82,2914000000,기초지방자치단체,서구,광주광역시,클루,seogu.gwangju.kr,'고시공고 https://www.seogu.gwangju.kr/api/eminwon/gosiList.es?mid=a10311010500&not_ancmt_se_code=01,03,04&list_gubun=A 입법예고 https://www.seogu.gwangju.kr/api/eminwon/gosiList.es?mid=a10311010400&not_ancmt_se_code=03',△(담당부서),O,△(일부),HWP,O,△(담당부서),2008-12-22,,X(재산없음),X,재산공개 없음,");
+map1.set("광주광역시 남구청", "83,2915500000,기초지방자치단체,남구,광주광역시,클루,namgu.gwangju.kr,https://www.namgu.gwangju.kr/magazine.es?mid=a10307030000,X,X,X,PDF,O,X(검색 아예 안됨),2018년 1월호/2018-01-24,,X(재산없음),X,재산공개 없음,");
+map1.set("광주광역시 북구청", "84,2917000000,기초지방자치단체,북구,광주광역시,클루,bukgu.gwangju.kr,'입법고시공고 https://bukgu.gwangju.kr/menu.es?mid=a10201050100 구보는 잡지형태',△(담당부서),O,△(일부),HWP,O,△(담당부서),2015-01-02,,X(재산없음),X,재산공개 없음,");
+map1.set("광주광역시 광산구청", "85,2920000000,기초지방자치단체,광산구,광주광역시,클루,gwangsan.go.kr,'https://www.gwangsan.go.kr/bb/bbEminwon.php?pageID=gwangsan0202020000&not_ancmt_se_code=01,03,04',△(담당부서),O,△(일부),HWP,O,△(담당부서),2008-11-12,,X(재산없음),X,재산공개 없음,");
+map1.set("대전광역시 동구청", "86,3011000000,기초지방자치단체,동구,대전광역시,권오현,donggu.go.kr,https://donggu.go.kr/dg/kor/article/dongguOfficial,X,O,X,PDF,O,X,1185호/2015.1.5.,,X(재산없음),X,,");
+map1.set("대전광역시 중구청", "87,3014000000,기초지방자치단체,중구,대전광역시,권오현,djjunggu.go.kr,https://djjunggu.go.kr/bbs/BBSMSTR_000000000133/list.do,X,O,X,PDF,O,,773호/2015.4.24.,,,,,");
+map1.set("대전광역시 서구청", "88,3017000000,기초지방자치단체,서구,대전광역시,권오현,seogu.go.kr,https://www.seogu.go.kr/kor/board.do?mnucd=SGMENU0100115,X,O,X,PDF,O,O,494호/2009.01.09.,,,,,");
+map1.set("대전광역시 유성구청", "89,3020000000,기초지방자치단체,유성구,대전광역시,권오현,yuseong.go.kr,https://www.yuseong.go.kr/bbs/BBSMSTR_000000000101/list.do,X,X,X,PDF,O,X,,,,,,");
+map1.set("대전광역시 대덕구청", "90,3023000000,기초지방자치단체,대덕구,대전광역시,권오현,daedeok.go.kr,https://www.daedeok.go.kr/dpt/dpt02/DPT020301_cmmGalleryList.do,X,O,X,PDF,O,X,1호,,,,,");
+map1.set("울산광역시 중구청", "91,3111000000,기초지방자치단체,중구,울산광역시,권오현,junggu.ulsan.kr,https://www.junggu.ulsan.kr/board/list.ulsan?boardId=BBS_0000044&menuCd=DOM_000000302007006000&contentsSid=535&cpath=,X,O,X,PDF,O,X,700,2010.2.22.,,,,");
+map1.set("울산광역시 남구청", "92,3114000000,기초지방자치단체,남구,울산광역시,권오현,ulsannamgu.go.kr,https://www.ulsannamgu.go.kr/cop/bbs/selectBoardList.do?bbsId=pressRelease,X,X,X,PDF,O,X,페이징 오류,,,,,");
+map1.set("울산광역시 동구청", "93,3117000000,기초지방자치단체,동구,울산광역시,권오현,donggu.ulsan.kr,https://www.donggu.ulsan.kr/cop/bbs/selectBoardList.do?bbsId=inform_report,X,X,X,PDF,O,검색안됨,476,2006.06.27.,,,,");
+map1.set("울산광역시 북구청", "94,3120000000,기초지방자치단체,북구,울산광역시,권오현,bukgu.ulsan.kr,https://www.bukgu.ulsan.kr/lay1/bbs/S1T1903C104/A/26/list.do,X,X,X,PDF,O,X,615,2010.01.08.,,,,");
+map1.set("울산광역시 울주군청", "95,3171000000,기초지방자치단체,울주군,울산광역시,권오현,ulju.ulsan.kr,https://www.ulju.ulsan.kr/ulju/bbs/list.do?ptIdx=148&mId=0404050000&token=1663761775883,X,O,X,PDF,O,X,1113,2017.01.01.,,,,");
+map1.set("경기도 수원시청", "96,4111000000,기초지방자치단체,수원시,경기도,황서원,suwon.go.kr,https://www.suwon.go.kr/web/board/BD_board.list.do?bbsCd=1035,'O (5) 제목,작성자,등록일,내용,첨부파일',O ,X,pdf,O,'O (3) (제목,내용,제목+내용)',1054호 ,2010. 3. 29,O (10) (18건),재산등록,,");
+map1.set("경기도 성남시청", "97,4113000000,기초지방자치단체,성남시,경기도,황서원,seongnam.go.kr,https://www.seongnam.go.kr/city/1000063/30009/bbsList.do,'O (5) 제목,작성자,등록일,작성부서',O ,X,'pdf,hwp',O,X,476호,2003. 4. 14,,,,");
+map1.set("경기도 의정부시청", "98,4115000000,기초지방자치단체,의정부시,경기도,황서원,https://www.ui4u.go.kr/,https://www.ui4u.go.kr/portal/news/list.do?mId=0303020000,'O (5) 제목,발행처,발행년도',X,X,PDF,O,'O (자료구분, 키워드검색)',625호,2007.6.1,,,,");
+map1.set("경기도 안양시청", "99,4117000000,기초지방자치단체,안양시,경기도,황서원,anyang.go.kr,https://www.anyang.go.kr/main/selectBbsNttList.do?bbsNo=71&key=274,O (5) 제목 부서명 파일 작성일 조회수,O ,X,PDF,O,X,217호,2017-09-21,,,,");
+map1.set("경기도 광명시청", "100,4121000000,기초지방자치단체,광명시,경기도,황서원,gm.go.kr,https://www.gm.go.kr/pt/user/bbs/BD_selectBbsList.do?q_bbsCode=2037,O (4) 제목 파일 담당자 발간일,O ,X,PDF,O,X,446호,2004-01-08,,,예전파일 zip으로 묶여 있음,");
+map1.set("경기도 평택시청", "101,4122000000,기초지방자치단체,평택시,경기도,황서원,pyeongtaek.go.kr,https://www.pyeongtaek.go.kr/pyeongtaek/bbs/list.do?ptIdx=51&mId=0403020000,O (5) 제목 작성자 작성일 파일 조회,O ,X,PDF,O,X,279호,2005.01.13,,,,");
+map1.set("경기도 양주시청", "102,4163000000,기초지방자치단체,양주시,경기도,황서원,yangju.go.kr,https://www.yangju.go.kr/www/selectEbookList.do?key=3845,X,X,X,jpg (e-book),X,X (0),2006-46호,2006.11.6,,,,");
+map1.set("경기도 동두천시청", "103,4125000000,기초지방자치단체,동두천시,경기도,황서원,ddc.go.kr,https://www.ddc.go.kr/ddc/selectBbsNttList.do?bbsNo=93&key=1331,O (4) 제목 파일 조회수 작성일,O ,X,PDF,O,X,160호,2009-12-8,,,,");
+map1.set("경기도 안산시청", "104,4127000000,기초지방자치단체,안산시,경기도,황서원,https://www.ansan.go.kr/www/main/main.do,,O (5) 호수 년도 등록부서 등록일 조회수 파일,X,X,PDF,O,X,1호,2017-01-02,,,,");
+map1.set("경기도 고양시청", "105,4128000000,기초지방자치단체,고양시,경기도,황서원,goyang.go.kr,https://www.goyang.go.kr/news/user/bbs/BD_selectBbsList.do?q_bbsCode=1032,O (5) 제목 작성자 등록일 조회수 파일,O ,X,PDF,O,'O (4) (제목,내용,작성자,담당부서)',487호,2009.03.27,,,,");
+map1.set("경기도 과천시청", "106,4129000000,기초지방자치단체,과천시,경기도,황서원,gccity.go.kr,https://www.gccity.go.kr/portal/bbs/list.do?ptIdx=233&mId=0303020000,O (5) 제목 작성자 등록일 조회수 파일,O ,X,hwp,O,'O (3) (제목,내용,작성자)',2009-1호,2009-01-19,,,,");
+map1.set("경기도 의왕시청", "107,4143000000,기초지방자치단체,의왕시,경기도,황서원,https://www.uiwang.go.kr,https://www.uiwang.go.kr/UWKORINFO0501,O (5) 제목 작성자 작성일 조회수 첨부파일,O ,X,hwp,O,X,219호,2004-2-14,,,리스트가 오염됨 https://www.gccity.go.kr/portal/bbs/list.do?ptIdx=233&mId=0303020000,");
+map1.set("경기도 구리시청", "108,4131000000,기초지방자치단체,구리시,경기도,황서원,guri.go.kr,https://www.guri.go.kr/brd/board/5916/L/menu/5915,'O (6) 제목,등록자부서명,등록자명,발간일,조회,첨부',O ,X,pdf,O,'O (4) (제목,내용,작성자,제목+내용)',제1758호,2019-10-01,O (1) (1건),재산등록,,");
+map1.set("경기도 남양주시청", "109,4136000000,기초지방자치단체,남양주시,경기도,황서원,nyj.go.kr,https://www.nyj.go.kr/main/188,'O (5) 제목,작성자,등록일,조회,첨부파일',X,X,pdf,O,'O (5) (제목,내용,첨부파일,제목+내용+첨부파일)',제632호,2003.12.02,X (0),X,,");
+map1.set("경기도 오산시청", "110,4137000000,기초지방자치단체,오산시,경기도,황서원,osan.go.kr,https://www.osan.go.kr/portal/bbs/list.do?ptIdx=187&mId=0301060000,'O (5) 제목,작성자,등록일,조회,첨부파일',O ,X,'hwp.xlsx,pdf',O,'O (3) (제목,내용,작성자)',259호,2006.10.31,X (0),X,,");
+map1.set("경기도 화성시청", "111,4159000000,기초지방자치단체,화성시,경기도,황서원,hscity.go.kr,https://www.hscity.go.kr/www/user/bbs/BD_selectBbsList.do?q_bbsCode=1030,'O (5) 제목,작성자,등록일,내용,첨부파일',O ,X,'pdf,hwp',O,'O (2) (전체일치, 부분일치)',51호,2013.06.27,O (4) (4건),재산등록,,");
+map1.set("경기도 시흥시청", "112,4139000000,기초지방자치단체,시흥시,경기도,황서원,siheung.go.kr,https://www.siheung.go.kr/main/bbs/list.do?ptIdx=50&mId=0403020000,'O (5) 제목,작성자,등록일,조회,첨부파일',O ,X,pdf,O,'O (3) (제목,내용,작성자)',17호,2014.08.12,O (1) (1건),재산등록,,");
+map1.set("경기도 군포시청", "113,4141000000,기초지방자치단체,군포시,경기도,황서원,gunpo.go.kr,https://www.gunpo.go.kr/www/selectBbsNttList.do?bbsNo=709&key=4202,'O (9) 담당자,제목,담당부서,문의처,이메일,조회,등록일,상세내용,첨부',O ,X,hwp.xls,O,'O (3) (제목,내용,담당자)',137호,2005.11.22,O (10) (10건),재산등록,,");
+map1.set("경기도 하남시청", "114,4145000000,기초지방자치단체,하남시,경기도,황서원,hanam.go.kr,https://www.hanam.go.kr/www/selectBbsNttList.do?bbsNo=37&key=178,'△(3) (제목,작성자,파일)',O ,X,'hwp.xlsx,pdf',O,'O (2) (제목,내용)',648호,2009.08.24,O (10) (13건),재산등록,,");
+map1.set("경기도 파주시청", "115,4148000000,기초지방자치단체,파주시,경기도,황서원,paju.go.kr,https://www.paju.go.kr/news/user/board/BD_board.list.do?bbsCd=1025,'O (4) (담당부서,작성일,파일,담당자)',O ,X,'hwp.xlsx,pdf',O,'O (5) 제목,내용,부서명,등록자명,전체',689호,2008.07.17,O (1) (1건),재산등록,,");
+map1.set("경기도 여주시청", "116,4167000000,기초지방자치단체,여주시,경기도,황서원,yeoju.go.kr,https://www.yeoju.go.kr/brd/board/887/L/menu/607,O (6),X,X,'pdf,hwp',O,'O (4) (제목,내용,작성자,제목+내용)',230호,2007.06.18,X (0),X,2016년까진 목록을 상세에 복붙. 그 후엔 파일만 올림,");
+map1.set("경기도 이천시청", "117,4150000000,기초지방자치단체,이천시,경기도,황서원,icheon.go.kr,http://ebook.icheon.go.kr/list.jsp?Dir=0500000000,X (0),X,X,jpg (e-book),X,X (0),19호,1996.01.25,X (0),X,ebook 다운로드 불가,");
+map1.set("경기도 용인시청", "118,4146000000,기초지방자치단체,용인시,경기도,황서원,yongin.go.kr,https://www.yongin.go.kr/user/bbs/BD_selectBbsList.do?q_bbsCode=1001&q_clCode=4,O (6),O ,X,'pdf,hwp',O,'O (3) (제목,내용,부서명)',72호,2005.04.29,O (5),재산공개,,");
+map1.set("경기도 안성시청", "119,4155000000,기초지방자치단체,안성시,경기도,황서원,anseong.go.kr,https://www.anseong.go.kr/portal/saeol/publicList.do?plctSeCode=2&mId=0403030000,'△(3) (발행일자,제목,간행물명)',O ,X,'pdf,hwp',O,X (1) (제목),309호,2005.07.22,X (0),X,,");
+map1.set("경기도 김포시청", "120,4157000000,기초지방자치단체,김포시,경기도,황서원,gimpo.go.kr,https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=296&key=1008,'O (5) (제목,작성일,조회수,담당부서,파일)',X,X,'hwp.xlsx,pdf',O,'X (2) (재목,내용)',,2005.10.06,O (5),재산등록,2015년 이전만,");
+map1.set("경기도 광주시청", "121,4161000000,기초지방자치단체,광주시,경기도,황서원,gjcity.go.kr,https://www.gjcity.go.kr/portal/news/list.do?mId=0203030000,'△(3) (자료구분,등록일자,문서형태)',X,X,'pdf,hwp',O,'X (있지만 작동안함) (9) (발행년도,자료구분,자치법규,입법예고,훈령,조례,규칙,고시,공고)',제 106호,2003.08.11,X (0),X,검색 작동 안됨,");
+map1.set("경기도 포천시청", "122,4165000000,기초지방자치단체,포천시,경기도,황서원,pcs21.go.kr,https://27.101.127.13/www/selectTnCityNoticeWebList.do?key=8664,△(1) (제목),O ,X,'pdf,hwp',O,'O (7) (검색기간,검색어) (필터링: 조례 규칙 훈령 예규 입법예고 고시 공고)',1호,2007.01.03,O (1) (1건),재산등록,'탭이 나눠져 있는데, 새로운 UI가 더 좋음',");
+map1.set("경기도 연천군청", "123,4180000000,기초지방자치단체,연천군,경기도,황서원,yeoncheon.go.kr,https://www.yeoncheon.go.kr/ebook/ebookList.do?key=3617&Dir=0103000000&sort=rcode,X (0),X,X,jpg (e-book),X,X (0),2001호,2009.1.12,X (0),X,ebook 다운로드 불가,");
+map1.set("경기도 양평군청", "124,4183000000,기초지방자치단체,양평군,경기도,황서원,yp21.go.kr,https://www.yp21.go.kr/www/selectBbsNttList.do?bbsNo=8&key=1123,O (6),O ,X,hwp.xls,O,'O (3) (제목, 내용, 작성자)',1170호,2016.01.05,X (0),X,간혹 별첨문서가 zip으로 압축,");
+map1.set("경기도 가평군청", "125,4182000000,기초지방자치단체,가평군,경기도,황서원,gp.go.kr,https://www.gp.go.kr/portal/selectBbsNttList.do?bbsNo=92&key=533,'△(3) (제목,내용,파일)',X,X,'hwpx,zip(hwp,pdf,xlsx)',O,X,407호,2008-03-05,,,,");
+map1.set("경기도 부천시청", "126,4119000000,기초지방자치단체,부천시,경기도,황서원,bucheon.go.kr,http://bucheon.go.kr/site/program/board/basicboard/list?boardtypeid=26758&menuid=148002002007,'O (5) (제목,작성자,발행일,전자책,파일)',O ,X,pdf,O,O,제936호,2012-12-10,,,,");
+map1.set("강원도 춘천시청", "127,4211000000,기초지방자치단체,춘천시,강원도,클루,https://www.chuncheon.go.kr/,http://cityhall.chuncheon.go.kr/board/list.chuncheon?boardId=BBS_0000293&menuCd=DOM_000000505006001000&contentsSid=1888&cpath=,X,O,X,pdf,O,X,633호/2009.01.08,,,,,");
+map1.set("강원도 원주시청", "128,4213000000,기초지방자치단체,원주시,강원도,클루,wonju.go.kr,https://www.wonju.go.kr/ecatalog/contents.do?key=4514&,X,X,X,pdf (e-book),O,X,834호,2010.09.17,,,ebook 다운로드 불가,");
+map1.set("강원도 강릉시청", "129,4215000000,기초지방자치단체,강릉시,강원도,클루,gangneung.go.kr,https://www.gn.go.kr/www/selectSiboWebList.do?pageUnit=10&pageIndex=1&key=280&siboNo=847,O,O,O,hwp,O,O,817호,2013.01.02,,,우수 사례,");
+map1.set("강원도 동해시청", "130,4217000000,기초지방자치단체,동해시,강원도,클루,dh.go.kr,https://www.dh.go.kr/pages/sub.htm?nav_code=dh1470757806,X,X,X,hwp,O,X,889호,2014.06.20.,,,,");
+map1.set("강원도 삼척시청", "131,4223000000,기초지방자치단체,삼척시,강원도,클루,samcheok.go.kr,https://www.samcheok.go.kr/media/00084/00085.web,X,X,X,pdf (e-book),O,X,701호,2011.12.30,,,,");
+map1.set("강원도 태백시청", "132,4219000000,기초지방자치단체,태백시,강원도,클루,taebaek.go.kr,https://www.taebaek.go.kr/www/selectBbsNttList.do?bbsNo=36&key=368,X,X,X,pdf,O,X,226호,2004.06.25,,,,");
+map1.set("강원도 정선군청", "133,4277000000,기초지방자치단체,정선군,강원도,클루,jeongseon.go.kr,https://www.jeongseon.go.kr/portal/openadmin/admindata/newspaper,X,X,X,pdf,O,X,166호,2008.02.20,,,,");
+map1.set("강원도 속초시청", "134,4221000000,기초지방자치단체,속초시,강원도,클루,sokcho.gangwon.kr,https://www.sokcho.go.kr/portal/openinfo/sokchonews/electronicbulletin,X,X,X,pdf,O,X,673호,2012.02.08,,,,");
+map1.set("강원도 고성군청", "135,4282000000,기초지방자치단체,고성군,강원도,클루,gwgs.go.kr,https://www.gwgs.go.kr/prog/bbsArticle/BBSMSTR_000000000208/list.do,X,X,X,pdf,O,X,463호,2007.08.05,,,상세페이지에 Pdf 를 임베드,");
+map1.set("강원도 양양군청", "136,4283000000,기초지방자치단체,양양군,강원도,클루,yangyang.go.kr,https://www.yangyang.go.kr/gw/portal/yyc_news_elecbull,X,X,X,pdf,O,X,87호,2011.12.01,,,초기에는 있던 상세페이지 목록을 최근에는 없앰,");
+map1.set("강원도 인제군청", "137,4281000000,기초지방자치단체,인제군,강원도,클루,inje.go.kr,https://www.inje.go.kr/portal/inje-news/inje-pr/record,X,X,X,pdf,O,X,150호,2008.04.26,,,,");
+map1.set("강원도 홍천군청", "138,4272000000,기초지방자치단체,홍천군,강원도,클루,hongcheon.gangwon.kr,https://www.hongcheon.go.kr/www/selectBbsNttList.do?key=245&bbsNo=66&searchCtgry=&pageUnit=10&searchCnd=all&searchKrwd=&pageIndex=1,X,O,X,pdf,O,X,345호,2012.01.01,,,,");
+map1.set("강원도 횡성군청", "139,4273000000,기초지방자치단체,횡성군,강원도,클루,hsg.go.kr,https://www.hsg.go.kr/intro/media/00000084.web#,X,X,X,pdf,O,X,284호,2008.06.26,,,,");
+map1.set("강원도 영월군청", "140,4275000000,기초지방자치단체,영월군,강원도,황서원,yw.go.kr,https://www.yw.go.kr/www/selectBbsNttList.do?bbsNo=20&key=22,'O (3) (제목,내용,파일)',X,X,hwp,O,X,496호,2009.10.07,,,'보통 제목이 군보인데, 영월군 ''공보''로 되어있음.',");
+map1.set("강원도 평창군청", "141,4276000000,기초지방자치단체,평창군,강원도,황서원,www.pc.go.kr,https://www.pc.go.kr/portal/government/government-gunbo,'O (6) (제목,작성자,등록일,조회수,내용,첨부파일)',O,X,pdf,O,△ (작성자),517호,2009-01-02,,,,");
+map1.set("강원도 화천군청", "142,4279000000,기초지방자치단체,화천군,강원도,황서원,ihc.go.kr,https://www.ihc.go.kr/www/selectBbsNttList.do;jsessionid=6B79F721200D27C64B77F553CF187221?bbsNo=41&key=165,'O (4) (제목,작성자,내용,파일)',X,X,pdf,O,X,80호,2008.09.17,,,,");
+map1.set("강원도 양구군청", "143,4280000000,기초지방자치단체,양구군,강원도,황서원,yanggu.go.kr,못찾음 - 검색해도 안나옴,,,,,,,,,,,전자 군보 없는 듯,");
+map1.set("강원도 철원군청", "144,4278000000,기초지방자치단체,철원군,강원도,황서원,cwg.go.kr,https://www.cwg.go.kr/www/selectBbsNttList.do?bbsNo=34&key=221,X,O,X,pdf,O,X,제2019-18호,2019.6.26.,,,,");
+map1.set("충청북도 청주시청", "145,4311000000,기초지방자치단체,청주시,충청북도,이은수,cheongju.go.kr,https://www.cheongju.go.kr/www/selectBbsNttList.do?bbsNo=38&key=270,X,△ (있기도 없기도),X,pdf,X,O (년도),1,2014.07.01,,,,");
+map1.set("충청북도 충주시청", "146,4313000000,기초지방자치단체,충주시,충청북도,이은수,https://www.chungju.go.kr/,https://www.chungju.go.kr/www/selectBbsNttList.do?bbsNo=76&key=496,X,O,X,pdf,O,X,543,2009.06.22,,,2009년 6월22일 이전 호는 게시글은 있으나 접근 불가 (e-book 링크인데 깨짐),");
+map1.set("충청북도 제천시청", "147,4315000000,기초지방자치단체,제천시,충청북도,이은수,https://www.jecheon.go.kr/www/index.do,https://www.jecheon.go.kr/www/selectBbsNttList.do?bbsNo=35&key=143,X,△ (있기도 없기도),X,pdf,O,X,709,2008.09.05,,,,");
+map1.set("충청북도 단양군청", "148,4380000000,기초지방자치단체,단양군,충청북도,이은수,https://www.danyang.go.kr/dy21/1,https://www.danyang.go.kr/dy21/793,X,O,X,pdf,△,X,1,2012.01.10,,,,");
+map1.set("충청북도 영동군청", "149,4374000000,기초지방자치단체,영동군,충청북도,이은수,yd21.go.kr,https://ebook.yd21.go.kr/list/?u=31&u2=111,X,X,X,pdf,O,X,1408,2019.02.28,,,검색이 아예 없음,");
+map1.set("충청북도 보은군청", "150,4372000000,기초지방자치단체,보은군,충청북도,이은수,boeun.go.kr,https://www.boeun.go.kr/www/selectBbsNttList.do?bbsNo=71&key=808,X,O,X,pdf,O,X,341,2005.11.15,,,341호-347호는 hwp 파일,");
+map1.set("충청북도 옥천군청", "151,4373000000,기초지방자치단체,옥천군,충청북도,이은수,oc.go.kr,https://www.oc.go.kr/www/selectBbsNttList.do?bbsNo=154&key=242&,X,X,X,pdf,O,△ (기간) 내용으로 검색 불가능,571,2006.04.10,,,557호-570호는 게시글만 있고 파일 없음,");
+map1.set("충청북도 음성군청", "152,4377000000,기초지방자치단체,음성군,충청북도,이은수,eumseong.go.kr,https://www.chungbuk.go.kr/cblib/selectBbsNttList.do?bbsNo=203&key=1485,X,O,X,'pdf, ebook',X,X,2169,2001.11.02,,,,");
+map1.set("충청북도 진천군청", "153,4375000000,기초지방자치단체,진천군,충청북도,이은수,jincheon.go.kr,https://www.jincheon.go.kr/home/sub.do?menukey=250,X,X,X,pdf,O,△ (기간),1809,2014.01.06,,,,");
+map1.set("충청북도 괴산군청", "154,4376000000,기초지방자치단체,괴산군,충청북도,이은수,https://www.goesan.go.kr/www/index.do,,X,X,X,pdf,O,X,62,2006.01.06,,,24호-61호는 게시글만 있고 파일 없음,");
+map1.set("충청북도 증평군청", "155,4374500000,기초지방자치단체,증평군,충청북도,이은수,jp.go.kr,https://www.jp.go.kr/media/prog/eBook/EB02/sub03_02/list.do,X,X,X,pdf,O,X ,25,2010.12.03,,,,");
+map1.set("충청남도 공주시청", "156,4415000000,기초지방자치단체,공주시,충청남도,오원석,https://www.gongju.go.kr/,https://www.gongju.go.kr/prog/eBook/EBKR_01/kr/sub04_06/list.do,X,X,X,PDF,O,X,246호(2005.02.01),,,,상세페이지 없음,");
+map1.set("충청남도 보령시청", "157,4418000000,기초지방자치단체,보령시,충청남도,오원석,https://www.brcn.go.kr/,https://www.brcn.go.kr/prog/eBook/D/kor/sub04_14/list.do,X,X,X,PDF,X,X,976호(2022.01.10),,,,상세페이지 없음,");
+map1.set("충청남도 아산시청", "158,4420000000,기초지방자치단체,아산시,충청남도,오원석,asan.go.kr,https://www.asan.go.kr/main/cms/?no=136,X,X,X,PDF,O,X,653호(2012.10.05),,,,,");
+map1.set("충청남도 서산시청", "159,4421000000,기초지방자치단체,서산시,충청남도,오원석,seosan.go.kr,https://www.seosan.go.kr/ebook/usr/ebookContentList.do?key=8290&gid=131230124334488&code=0A,X,X,X,ebook 형태,X,X,453호(2013.02.12),,,,다운로드 기능이 없고 뷰어만 있음,");
+map1.set("충청남도 태안군청", "160,4482500000,기초지방자치단체,태안군,충청남도,오원석,taean.go.kr,https://www.taean.go.kr/cop/bbs/BBSMSTR_000000000041/selectBoardList.do,X,X,X,PDF,O,X,386호(2014.4.30),,,,,");
+map1.set("충청남도 금산군청", "161,4471000000,기초지방자치단체,금산군,충청남도,오원석,geumsan.go.kr,https://www.geumsan.go.kr/kr/html/sub03/030103.html,X,X,X,PDF,O,X,273호(2009.03.16),2009.03.16,X,X,상세가 아예 없음 / 제목은 의미 없음,");
+map1.set("충청남도 논산시청", "162,4423000000,기초지방자치단체,논산시,충청남도,오원석,nonsan.go.kr,https://www.nonsan.go.kr/kor/html/sub03/030112.html,X,X,X,PDF,O,X,439호(2009.02.27),2009.02.27,X,X,상세가 아예 없음 / 제목은 의미 없음,");
+map1.set("충청남도 계룡시청", "163,4425000000,기초지방자치단체,계룡시,충청남도,오원석,gyeryong.go.kr,https://gyeryong.go.kr/kr/html/sub03/030107.html,X,X,X,PDF,O,X,596호(2019.01.10),2019.01.10,X,X,상세가 아예 없음 / 제목은 의미 없음,");
+map1.set("충청남도 부여군청", "164,4476000000,기초지방자치단체,부여군,충청남도,황서원,buyeo.go.kr,https://www.buyeo.go.kr/_prog/_board/index.php?code=news_09&site_dvs_cd=kr&menu_dvs_cd=0412,O,X,X,PDF,O,△ (작성자),282호,2020-09-02,,,군정소식에 군보가 섞여있음,");
+map1.set("충청남도 서천군청", "165,4477000000,기초지방자치단체,서천군,충청남도,오원석,seocheon.go.kr,https://www.seocheon.go.kr/cop/bbs/BBSMSTR_000000000411/selectBoardList.do,X,O,O,PDF,O,X,278호,2020-01-31,X,X,,");
+map1.set("충청남도 홍성군청", "166,4480000000,기초지방자치단체,홍성군,충청남도,오원석,hongseong.go.kr,https://hongseong.go.kr/prog/eBook/E04/kor/sub03_0210/list.do,X,X,X,PDF,X,X,622호,2018.01.02,X,X,상세가 아예 없음 / 제목은 의미 없음,");
+map1.set("충청남도 청양군청", "167,4479000000,기초지방자치단체,청양군,충청남도,오원석,www.cheongyang.go.kr,https://www.cheongyang.go.kr/cop/bbs/BBSMSTR_000000000680/selectBoardList.do,X,O,O,PDF,O,X,175호,2018.04.02,X,X,,");
+map1.set("충청남도 예산군청", "168,4481000000,기초지방자치단체,예산군,충청남도,오원석,yesan.go.kr,http://www.yesan.go.kr/prog/letter/issue/media/sub01_02/list.do,X,X,X,PDF,O,X,322호,2012.02.03,X,X,상세가 아예 없음 / 제목은 의미 없음,");
+map1.set("충청남도 당진시청", "169,4427000000,기초지방자치단체,당진시,충청남도,오원석,dangjin.go.kr,https://www.dangjin.go.kr/cop/bbs/BBSMSTR_000000000017/selectBoardList.do,X,X,O,PDF,O,X,72호,2014.10.15,X,X,,");
+map1.set("충청남도 천안시청", "170,4413000000,기초지방자치단체,천안시,충청남도,오원석,cheonan.go.kr,https://www.cheonan.go.kr/cop/bbs/BBSMSTR_000000000475/selectBoardList.do,X,X,O,PDF,O,X,528호,2008.02.27,,,,");
+map1.set("전라북도 전주시청", "171,4511000000,기초지방자치단체,전주시,전라북도,권오현,jeonju.go.kr,https://jeonju.go.kr/planweb/board/list.9is?contentUid=9be517a769953e5f0169c1f3d338077f&boardUid=9be517a74f8dee91014f90f785f0072a&contentUid=9be517a769953e5f0169c1f3d338077f&subPath=,X,X,X,PDF/XLS,O,X,1호(1984.06.15.),1984.06.15.,,,이전 시보를 별도 사이트에서 제공하고 있음 ( https://jeonju.go.kr/sibo/1/index.html ),");
+map1.set("전라북도 군산시청", "172,4513000000,기초지방자치단체,군산시,전라북도,권오현,gunsan.go.kr,https://www.gunsan.go.kr/main/m146,X,O,X,PDF,O,X,312호(2009.01.15.),2009.01.15.,,,,");
+map1.set("전라북도 익산시청", "173,4514000000,기초지방자치단체,익산시,전라북도,권오현,iksan.go.kr,https://www.iksan.go.kr/board/list.iksan?boardId=BBS_IKSAN_GOSI&menuCd=DOM_000002003008003005&contentsSid=2484&cpath=,X,X,X,PDF,O,X,240호(2006.01.18.),2006.01.18.,,,예전 시보가 목록은 있으나 실제 파일이 없음. 마이그레이션이 안 된 듯.,");
+map1.set("전라북도 정읍시청", "174,4518000000,기초지방자치단체,정읍시,전라북도,권오현,jeongeup.go.kr,https://www.jeongeup.go.kr/board/list.jeongeup?boardId=BBS_0000014&menuCd=DOM_000000101001003000&contentsSid=7&cpath=,X,X,X,HWP,O,X,515호(2015.12.04),2015.12.04.,,,,");
+map1.set("전라북도 남원시청", "175,4519000000,기초지방자치단체,남원시,전라북도,권오현,namwon.go.kr,https://www.namwon.go.kr/board/list.do?boardId=BBS_0000008&menuCd=DOM_000000202001006000&contentsSid=50&cpath=,X,O,X,PDF,O,X,11호(2012.02.15),2012.02.15,,,,");
+map1.set("전라북도 김제시청", "176,4521000000,기초지방자치단체,김제시,전라북도,권오현,gimje.go.kr,https://www.gimje.go.kr/board/view.gimje?boardId=BBS_0000065&menuCd=DOM_000000105001006000&paging=ok&startPage=1&dataSid=279801,X,O,X,HWP,O,X,,2006.12.29,,,,");
+map1.set("전라북도 완주군청", "177,4571000000,기초지방자치단체,완주군,전라북도,이서준,wanju.go.kr,https://www.wanju.go.kr/board/list.wanju?boardId=BBS_0000191&menuCd=DOM_000000102002006000&contentsSid=3487&cpath=,X,X,X,PDF,O,X,1호(1996.01.15),1996.01.15,,,,");
+map1.set("전라북도 진안군청", "178,4572000000,기초지방자치단체,진안군,전라북도,이서준,jinan.go.kr,https://www.jinan.go.kr/board/list.jinan?boardId=BBS_0000051&menuCd=DOM_000000107001006000&contentsSid=184&cpath=,X,X,X,PDF,X,X,410호(2011-11-30),2011-11-30,,,상세 페이지가 없고 공보를 다운로드만 할 수 있도록 설계해놓음,");
+map1.set("전라북도 무주군청", "179,4573000000,기초지방자치단체,무주군,전라북도,이서준,muju.go.kr,https://muju.go.kr/planweb/board/list.9is?contentUid=ff8080816c5f9d47016cbd3b808c0072&boardUid=ff8080816d3d662f016d41f188880379&contentUid=ff8080816c5f9d47016cbd3b808c0072&subPath=,X,X,X,PDF,X,X,480호(2017.01.02),2017.01.12,,,,");
+map1.set("전라북도 장수군청", "180,4574000000,기초지방자치단체,장수군,전라북도,이서준,jangsu.go.kr,https://www.jangsu.go.kr/board/list.jangsu?boardId=BBS_0000038&menuCd=DOM_000000402001008000&contentsSid=206&cpath=,X,X,X,PDF,O,X,365호(2017.12.01),2017.12.01,,,,");
+map1.set("전라북도 임실군청", "181,4575000000,기초지방자치단체,임실군,전라북도,이서준,imsil.go.kr,https://www.imsil.go.kr/board/list.imsil?boardId=BBS_0000027&menuCd=DOM_000000103002002000&contentsSid=173&cpath=,X,X,X,PDF,O,X,192호(2010.04.20),2010.04.20,,,,");
+map1.set("전라북도 순창군청", "182,4577000000,기초지방자치단체,순창군,전라북도,이서준,sunchang.go.kr,https://www.sunchang.go.kr/board/list.sunchang?boardId=BBS_0000072&menuCd=DOM_000000110001009000&contentsSid=1124&cpath=,X,X,X,HWP,O,X,472호(2019.09.02),2019.09.02,,,상세 페이지가 없고 공보를 다운로드만 할 수 있도록 설계해놓음,");
+map1.set("전라북도 고창군청", "183,4579000000,기초지방자치단체,고창군,전라북도,이서준,gochang.go.kr,https://www.gochang.go.kr/board/list.gochang?boardId=BBS_0000093&menuCd=DOM_000000102003003000&contentsSid=250&cpath=,X,X,X,PDF/HWP,O,X,468호(2012.05.18),2012.05.18,,,예전 군보는 hwp로 제공했었으나 최근 군보는 pdf로 제공해줌,");
+map1.set("전라북도 부안군청", "184,4580000000,기초지방자치단체,부안군,전라북도,오원석,www.buan.go.kr,https://www.buan.go.kr/board/list.buan?boardId=BBS_0000070&menuCd=DOM_000000103001006000&contentsSid=475&cpath=,X,O,O,PDF,O,X,267호,2008.08.26,X,X,,");
+map1.set("전라남도 목포시청", "185,4611000000,기초지방자치단체,목포시,전라남도,권오현,mokpo.go.kr,https://www.mokpo.go.kr/www/open_administration/dataroom/time_signal,X,X,X,PDF,O,X,806,파일다운로드안됨,,,,");
+map1.set("전라남도 여수시청", "186,4613000000,기초지방자치단체,여수시,전라남도,오원석,www.yeosu.go.kr,https://www.yeosu.go.kr/www/govt/news/cur_news,X,X,X,PDF,O,X,204호,2016.11.29,X,X,,");
+map1.set("전라남도 순천시청", "187,4615000000,기초지방자치단체,순천시,전라남도,권오현,suncheon.go.kr,https://www.suncheon.go.kr/kr/news/0004/0001/,X,X,X,PDF,O,X,페이징 오류,,,,,");
+map1.set("전라남도 나주시청", "188,4617000000,기초지방자치단체,나주시,전라남도,권오현,naju.go.kr,https://www.naju.go.kr/www/administration/new/officer,X,O,X,PDF,O,X,2012-1,2012년,,,,");
+map1.set("전라남도 광양시청", "189,4623000000,기초지방자치단체,광양시,전라남도,클루,gwangyang.go.kr,https://www.gwangyang.go.kr/board/list.gwangyang?boardId=BBS_0000204&menuCd=DOM_000000103014000000&contentsSid=3120&cpath=,X,X,X,PDF,O,X,2021-24호,2021.06.22,,,,");
+map1.set("전라남도 담양군청", "190,4671000000,기초지방자치단체,담양군,전라남도,클루,damyang.go.kr,http://www.damyang.go.kr/board/list.do?boardId=BBS_0000011&menuCd=DOM_000000104004006000&contentsSid=115&cpath=,X,O,X,PDF,O,X,509호,2014.01.02,,,,");
+map1.set("전라남도 장성군청", "191,4688000000,기초지방자치단체,장성군,전라남도,클루,jangseong.go.kr,검색결과 없음,,,,,,,,,,,,");
+map1.set("전라남도 곡성군청", "192,4672000000,기초지방자치단체,곡성군,전라남도,클루,gokseong.go.kr,https://www.gokseong.go.kr/kr/board/list.do?bbsId=BBS_000000000000170&menuNo=102002003000,X,O,X,PDF/XLSX,O,x,2063호,2016.02.02,,,개별 항목을 엑셀 파일로 별도 첨부한 우수사례,");
+map1.set("전라남도 구례군청", "193,4673000000,기초지방자치단체,구례군,전라남도,권오현,gurye.go.kr,https://gurye.go.kr/board/list.do?bbsId=bbs_0000000000000271&menuNo=115006000000,X,X,X,PDF,O,X,1734호,2013.3.4.,,,,");
+map1.set("전라남도 고흥군청", "194,4677000000,기초지방자치단체,고흥군,전라남도,황서원,www.goheung.go.kr,https://www.goheung.go.kr/boardList.do?boardId=BD_00020&pageId=www98,'O(5) (제목,작성자,작성일,조회,파일)',O,X,PDF,O,△ (작성자),200호,2006-07-07,,,,");
+map1.set("전라남도 보성군청", "195,4678000000,기초지방자치단체,보성군,전라남도,권오현,boseong.go.kr,https://www.boseong.go.kr/www/open_administration/city_news/gunbo,X,X,X,PDF,O,X,979호(2014.4.28.),2014.4.28.,,,,");
+map1.set("전라남도 화순군청", "196,4679000000,기초지방자치단체,화순군,전라남도,권오현,hwasun.go.kr,https://www.hwasun.go.kr/board.do?S=S01&M=020105000000&b_code=0000000146,X,O,X,PDF,O,X,2138호(2011.2.28.),2011.2.28.,,,,");
+map1.set("전라남도 장흥군청", "197,4680000000,기초지방자치단체,장흥군,전라남도,이서준,jangheung.go.kr,https://www.jangheung.go.kr/www/organization/news/history,X,X,X,PDF,X,X,2020-1호(연도 없음),연도없음,,,,");
+map1.set("전라남도 강진군청", "198,4681000000,기초지방자치단체,강진군,전라남도,황서원,gangjin.go.kr,검색결과 없음,,,,,,,,,,,,");
+map1.set("전라남도 완도군청", "199,4689000000,기초지방자치단체,완도군,전라남도,권오현,wando.go.kr,https://www.wando.go.kr/www/administration/news/wando_newsletter,X,O,X,PDF/HWP,O,X,949호(2014.7.31.),2014.9.1.,,,'2011년부터 2014년까지의 목록도 이미지로 제공하지만, 내용은 없음.',");
+map1.set("전라남도 해남군청", "200,4682000000,기초지방자치단체,해남군,전라남도,권오현,haenam.go.kr,http://www.haenam.go.kr/planweb/board/list.9is?contentUid=18e3368f5d745106015de96c5eac208c&boardUid=18e3368f5fb80fdc015fdc572d2d04bc&contentUid=18e3368f5d745106015de96c5eac208c,X,X,X,PDF,O,X,,2017.1.1.,,,상세에 목록이 나오나 제OOO호로 검색이 불가능함,");
+map1.set("전라남도 진도군청", "201,4690000000,기초지방자치단체,진도군,전라남도,권오현,jindo.go.kr,https://www.jindo.go.kr/home/board/B0097.cs?m=571,X,O,X,PDF,X,X,2017-41호(2017.5.24.),2017.5.24.,,,,");
+map1.set("전라남도 영암군청", "202,4683000000,기초지방자치단체,영암군,전라남도,벤지,yeongam.go.kr,검색결과 없음,,,,,,,,,,,,");
+map1.set("전라남도 무안군청", "203,4684000000,기초지방자치단체,무안군,전라남도,권오현,muan.go.kr,https://www.muan.go.kr/www/openmuan/new/newsletter,X,X,X,PDF,PDF,X,1468호 (2022.04.25),,,,,");
+map1.set("전라남도 영광군청", "204,4687000000,기초지방자치단체,영광군,전라남도,권오현,yeonggwang.go.kr,https://www.yeonggwang.go.kr/bbs/?b_id=news_electron&site=headquarter_new&mn=9061,X,O,X,PDF,O,X,제2010-54(2010.08.04),2010.08.09,,,,");
+map1.set("전라남도 함평군청", "205,4686000000,기초지방자치단체,함평군,전라남도,벤지,www.hampyeong.go.kr,https://www.hampyeong.go.kr/boardList.do?boardId=GUNBO&pageId=www277,X,X,X,PDF,X,X,19호,2021.08.02,X,,스캔본 PDF,");
+map1.set("전라남도 신안군청", "206,4691000000,기초지방자치단체,신안군,전라남도,클루,shinan.go.kr,검색결과 없음,,,,,,,,,,,,");
+map1.set("경상북도 포항시청", "207,4711000000,기초지방자치단체,포항시,경상북도,이서준,pohang.go.kr,https://www.pohang.go.kr/pohang/2634/subview.do,X,X,X,PDF,O,O(날짜),501호(2005.01.11),2005.01.11,,,전자관보 페이지는 안열리고 포항시보 페이지만 열림,");
+map1.set("경상북도 울릉군청", "208,4794000000,기초지방자치단체,울릉군,경상북도,이서준,www.ulleung.go.kr/,https://www.ulleung.go.kr/ko/page.do?mnu_uid=576&,X,X,O,PDF,O,X,1호(2009.04.28),2009.04.28,,,,");
+map1.set("경상북도 경주시청", "209,4713000000,기초지방자치단체,경주시,경상북도,이서준,gyeongju.go.kr,https://gyeongju.go.kr/open_content/ko/page.do?mnu_uid=3215&parm_mnu_uid=425&,X,O,O,PDF,O,X,413호(2012.05.24),2012.05.24,,,최초제공호수에는 jpg로도 시보를 제공해줬음,");
+map1.set("경상북도 김천시청", "210,4715000000,기초지방자치단체,김천시,경상북도,이서준,gimcheon.go.kr,https://www.gc.go.kr/portal/bbs/list.do?ptIdx=1511&mId=1203050000&person=139573,X,X,O,PDF,O,X,557호(2008.01.03),2008.01.03,,,,");
+map1.set("경상북도 안동시청", "211,4717000000,기초지방자치단체,안동시,경상북도,이서준,andong.go.kr,http://andong.go.kr/portal/ebook/siboList.do?cate6=060&mId=0403020000,X,X,X,PDF,O,'O(서명, 저자, 주제, 발행처)',622호(연도 안나와있음),안나와있음,,,시보 상세 페이지가 표 형태로 구성되어있음,");
+map1.set("경상북도 구미시청", "212,4719000000,기초지방자치단체,구미시,경상북도,이서준,gumi.go.kr,https://www.gumi.go.kr/portal/bbs/list.do?ptIdx=205&mId=0401060000,X,X,O,PDF,O,X,1074호(2009-03-04),2009-03-04,,,,");
+map1.set("경상북도 영주시청", "213,4721000000,기초지방자치단체,영주시,경상북도,이서준,yeongju.go.kr,https://yeongju.go.kr/open_content/main/page.do?mnu_uid=1506&,X,O,O,HWP,O,X,1440호(2013.12.02),2013.12.02,,,,");
+map1.set("경상북도 영천시청", "214,4723000000,기초지방자치단체,영천시,경상북도,이서준,yc.go.kr,https://www.yc.go.kr/portal/bbs/list.do?ptIdx=444&mId=0301060000,X,X,X,PDF,O,X,743호(2011.1.12),2011.1.12,,,,");
+map1.set("경상북도 상주시청", "215,4725000000,기초지방자치단체,상주시,경상북도,이서준,sangju.go.kr,https://www.sangju.go.kr/tabBoard/view.tc?mn=3046&pageSeq=2630&tabBoardSeq=31,X,X,O,PDF,O,X,350호(2007.04.30),2007.04.30,,,,");
+map1.set("경상북도 문경시청", "216,4728000000,기초지방자치단체,문경시,경상북도,이서준,gbmg.go.kr,https://www.gbmg.go.kr/portal/bbs/list.do?ptIdx=154&mId=0205050000,X,X,O,PDF,O,X,1504호(2019.01.01),2019.01.01,,,,");
+map1.set("경상북도 예천군청", "217,4790000000,기초지방자치단체,예천군,경상북도,황서원,ycg.kr,https://ycg.kr/open.content/ko/administrative/news/gunbo/,△(1) (작성자),O,X,PDF,O,△ (작성자),1131호,2018.11.26,,,,");
+map1.set("경상북도 경산시청", "218,4729000000,기초지방자치단체,경산시,경상북도,황서원,gbgs.go.kr,https://www.gbgs.go.kr/open_content/ko/page.do?mnu_uid=2185&parm_mnu_uid=2167&,'△(4) (제목, 작성자, 등록일, 파일)',O,X,PDF,O,△ (작성자),제429호,2011.7.28,,,,");
+map1.set("경상북도 청도군청", "219,4782000000,기초지방자치단체,청도군,경상북도,황서원,cd.go.kr,https://www.cheongdo.go.kr/open.content/ko/administration/news/news/,△(1) (작성자),X,X,'PDF, hwp',X,△ (작성자) (내용검색 없음),237호,2011.12.27,,,첫호는 hwp,");
+map1.set("경상북도 고령군청", "220,4783000000,기초지방자치단체,고령군,경상북도,이서준,goryeong.go.kr,http://www.goryeong.go.kr/kor/boardList.do?IDX=153&BRD_ID=1020,X,X,X,HWP,O,X,349호(2004.01.13),2004.01.13,,,,");
+map1.set("경상북도 성주군청", "221,4784000000,기초지방자치단체,성주군,경상북도,권오현,sj.go.kr,https://sj.go.kr/page.do?mnu_uid=1050&,X,X,X,PDF,O,X,639호,2011.6.8.,,,오래된 공보는 파일 다운로드가 안 됨.,");
+map1.set("경상북도 칠곡군청", "222,4785000000,기초지방자치단체,칠곡군,경상북도,권오현,chilgok.go.kr,https://www.chilgok.go.kr/portal/publication/list.do?CATEGORY=3&mId=0203030000,X,X,X,PDF,O,X,1109호,2004. 4. 18.,,,,");
+map1.set("경상북도 군위군청", "223,4772000000,기초지방자치단체,군위군,경상북도,권오현,gunwi.go.kr,https://gunwi.go.kr/ko/page.do?mnu_uid=173&,X,X,X,PDF,O,X,173호,2009.6.11.,,,,");
+map1.set("경상북도 의성군청", "224,4773000000,기초지방자치단체,의성군,경상북도,클루,usc.go.kr,https://www.usc.go.kr/tabBoard/view.tc?mn=1239&pageSeq=1491&tabBoardSeq=1,X,X,X,PDF,O,X,139호,2014.03.21,,,,");
+map1.set("경상북도 청송군청", "225,4775000000,기초지방자치단체,청송군,경상북도,클루,cs.go.kr,https://www.cs.go.kr/news/00002679/00002690.web,X,X(1개만 보여줌),X,PDF,O,X,1034호,2015.12.07,,,,");
+map1.set("경상북도 영양군청", "226,4776000000,기초지방자치단체,영양군,경상북도,클루,yyg.go.kr,https://www.yyg.go.kr/www/organization/yyg_news/electronic_news,X,X,X,PDF,O,X,1079호,2016.3.30,,,,");
+map1.set("경상북도 영덕군청", "227,4777000000,기초지방자치단체,영덕군,경상북도,벤지,yd.go.kr,https://www.yd.go.kr/?page_id=1043,O,X,O,'PDF,HWP',O,X,399호,2003-12-30,O,재산,과거는 HWP,");
+map1.set("경상북도 봉화군청", "228,4792000000,기초지방자치단체,봉화군,경상북도,벤지,bonghwa.go.kr,https://www.bonghwa.go.kr/open.content/ko/news/news/official.report/,O,X,O,HWP,X,X,917호,2010-01-05,X,,,");
+map1.set("경상북도 울진군청", "229,4793000000,기초지방자치단체,울진군,경상북도,벤지,uljin.go.kr,http://www.uljin.go.kr/board/list.uljin?boardId=BBS_0000046&menuCd=DOM_000000103002004000&contentsSid=71&cpath=,O,X,O,PDF,O,X,651호,2015-12-04,X,,,");
+map1.set("경상남도 진주시청", "230,4817000000,기초지방자치단체,진주시,경상남도,벤지,jinju.go.kr,https://www.jinju.go.kr/00130/00142/00143.web,X,X,X,PDF,O,X,404호,2012-07-06,X,,,");
+map1.set("경상남도 통영시청", "231,4822000000,기초지방자치단체,통영시,경상남도,벤지,tongyeong.go.kr,https://www.tongyeong.go.kr/00852/00872/00882.web,X,X,X,'PDF,HWP',O,X,336호,2012-06-12,X,,'최신 자료는 PDF, 과거 자료는 HWP',");
+map1.set("경상남도 고성군청", "232,4882000000,기초지방자치단체,고성군,경상남도,벤지,goseong.go.kr,https://www.goseong.go.kr/board/list.goseong?boardId=BBS_0000016&menuCd=DOM_000000102002003000&contentsSid=30&cpath=,X,X,X,PDF,△,X,335호,2012-03-04,X,,최신 자료만 텍스트 인식됨,");
+map1.set("경상남도 사천시청", "233,4824000000,기초지방자치단체,사천시,경상남도,벤지,sacheon.go.kr,https://www.sacheon.go.kr/news/00009/00016.web,X,X,X,PDF,O,X,270호,2011-01-20,X,,,");
+map1.set("경상남도 김해시청", "234,4825000000,기초지방자치단체,김해시,경상남도,벤지,gimhae.go.kr,https://www.gimhae.go.kr/03360/00023/00016.web,X,X,X,PDF,△,X,264,2011-07-29,X,,최산 자료만 텍스트 인식됨,");
+map1.set("경상남도 밀양시청", "235,4827000000,기초지방자치단체,밀양시,경상남도,벤지,miryang.go.kr,https://www.miryang.go.kr/web/bbs/selectBoardList.do?bbsId=BBSMSTR_000000000361&mnNo=30206000000,X,X,X,PDF,O,X,679,2019-01-03,X,,'제679호(2019-1-3)이후부터 볼 수 있음, 그전에는 이름만 있고 내용 없음 ',");
+map1.set("경상남도 거제시청", "236,4831000000,기초지방자치단체,거제시,경상남도,남반장,geoje.go.kr,https://www.geoje.go.kr/gbg/board/list.geoje?boardId=BBS_0000044&menuCd=DOM_000008904008001000,x,o,x,PDF,o,x,570호,2005. 9. 20,x,,'공보 서비스 초기 옛날 자료는 zip 파일로 올렸으나 클릭 시 ''요청하신 페이지를 찾을 수 없습니다.''',");
+map1.set("경상남도 의령군청", "237,4872000000,기초지방자치단체,의령군,경상남도,남반장,uiryeong.go.kr,http://www.uiryeong.go.kr/board/list.uiryeong?boardId=BBS_0000075&menuCd=DOM_000000403010006000&contentsSid=603&cpath=,x,x,x,PDF,o,x,227호,2010. 1. 25,x,,내용은 없고 내려받기만 가능,");
+map1.set("경상남도 함안군청", "238,4873000000,기초지방자치단체,함안군,경상남도,남반장,haman.go.kr,https://www.haman.go.kr/02416/02661/05762.web,x,x,x,PDF,o,x,210호,2013. 1. 9,x,,PDF가 2페이지 한 면 스프레드(가로)를 세로로 돌려 실음 ,");
+map1.set("경상남도 창녕군청", "239,4874000000,기초지방자치단체,창녕군,경상남도,남반장,cng.go.kr,https://www.cng.go.kr/news/00000372/00000400.web,x,o,x,PDF,o,x,340호 ,2012. 1. 12,x,,'내용에 목차 있고, 친절하게 PDF 목차에 해당 문서로 가는 링크가 되어 있음 ',");
+map1.set("경상남도 양산시청", "240,4833000000,기초지방자치단체,양산시,경상남도,남반장,yangsan.go.kr,https://www.yangsan.go.kr/portal/bbs/list.do?ptIdx=27&mId=0406000000,x,x,x,PDF,o,x,416호,2016. 2. 1,x,,내용은 없고 내려받기만 가능,");
+map1.set("경상남도 하동군청", "241,4885000000,기초지방자치단체,하동군,경상남도,남반장,hadong.go.kr,https://www.hadong.go.kr/opendata/00163.web,x,x,x,PDF,o,x,341호,2012. 7. 19,x,,내용은 없고 내려받기만 가능,");
+map1.set("경상남도 남해군청", "242,4884000000,기초지방자치단체,남해군,경상남도,남반장,namhae.go.kr,https://www.namhae.go.kr/socialm/board/List.do?gcode=1323&&pageCd=SM010106000&siteGubun=socialm,x,x,x,PDF,o,x,368호 ,2010. 1. 6,x,,내용은 없고 내려받기만 가능,");
+map1.set("경상남도 함양군청", "243,4887000000,기초지방자치단체,함양군,경상남도,남반장,hygn.go.kr,https://www.hygn.go.kr/media/00111/03171.web,x,x,x,PDF,o,x,500호,2016. 10. 7,x,,내용은 없고 내려받기만 가능,");
+map1.set("경상남도 산청군청", "244,4886000000,기초지방자치단체,산청군,경상남도,남반장,sancheong.go.kr,https://www.sancheong.go.kr/www/selectBbsNttList.do?bbsNo=2&key=159,x,x,x,PDF,o,x,207호,2011. 1. 28,x,,내용은 없고 내려받기만 가능,");
+map1.set("경상남도 거창군청", "245,4888000000,기초지방자치단체,거창군,경상남도,남반장,geochang.go.kr,https://www.geochang.go.kr/news/board/List.do?gcode=1187&&pageCd=NW0601000000&siteGubun=news,x,x,x,PDF,o,x,485호,2015. 6. 10,x,,'내용 ''붙임파일 참고하여 주시기 바랍니다.''',");
+map1.set("경상남도 합천군청", "246,4889000000,기초지방자치단체,합천군,경상남도,남반장,hc.go.kr,https://www.hc.go.kr/06184/06194.web,x,x,x,PDF,o,x,596호,2012. 11. 6,x,,내용은 없고 내려받기만 가능,");
+map1.set("경상남도 창원시청", "247,4811000000,기초지방자치단체,창원시,경상남도,남반장,changwon.go.kr,https://www.changwon.go.kr/cwportal/10310/10449.web,x,x,x,PDF,x,x,128호,2015. 1. 15,x,,내용은 없고 내려받기만 가능,");
+
+	
+
+	
+
+	var sltvalue = document.gongbomap.gov.value;
+	
+	if(sltvalue != '0'){
+		var latlong = sltvalue.split(",");
+		var vals = map1.get(latlong[0]);
+		const element = document.getElementById('info');
+		const valsarr = vals.split(",");
+		var html = '';
+		var p = '<p style="line-height:5px; color:black;font-size:13px;">';
+		var p1 = '<p style=" color:black;font-size:13px;">';
+		html += p+ '기관명 : ' + latlong[0] + '</p>';
+		html += p+ '기관 구분 : ' + valsarr[2] + '</p>';
+		html += p+ '홈페이지 : ' + valsarr[6] + '</p>';
+		html += p1+ '공보 URL : <a href="'+valsarr[7]+'" target="_blank">' + valsarr[7] + '</a></p>';
+		html += p+ '내용 상세 여부 : ' + valsarr[9] + '</p>';
+		html += p+ '상세 HTML 여부 : ' + valsarr[10] + '</p>';
+		html += p+ '파일 형식 : ' + valsarr[11] + '</p>';
+		html += p+ 'Readable PDF : ' + valsarr[12] + '</p>';
+		html += p+ '내용 검색 가능 여부 : ' + valsarr[13] + '</p>';
+		html += p+ '최초제공호수 및 연도 : ' + valsarr[14] + '</p>';
+		html += p+ '최초제공년도 : ' + valsarr[15] + '</p>';
+		html += p+ '메모 : ' + valsarr[18] + '</p>';
+
+	    //element.innerHTML  = '<div style="color:blue">'+html+'<div>';
+		element.innerHTML  = html;
+		
+		// 마커를 표시할 위치입니다 
+		var position =  new kakao.maps.LatLng(latlong[1], latlong[2]);
+
+		// 마커를 생성합니다
+		//alert(marker);
+		if(marker != null) {
+			infowindow.close(map, marker);  
+			marker.setMap(null);
+		}
+		marker = new kakao.maps.Marker({
+		  position: position,
+		  clickable: true // 마커를 클릭했을 때 지도의 클릭 이벤트가 발생하지 않도록 설정합니다
+		});
+
+		// 아래 코드는 위의 마커를 생성하는 코드에서 clickable: true 와 같이
+		// 마커를 클릭했을 때 지도의 클릭 이벤트가 발생하지 않도록 설정합니다
+		// marker.setClickable(true);
+
+		// 마커를 지도에 표시합니다.			
+		marker.setMap(map);
+
+		// 마커를 클릭했을 때 마커 위에 표시할 인포윈도우를 생성합니다
+		var iwContent = '<div style="padding:2px;">'+html+'</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+			iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
+
+		// 인포윈도우를 생성합니다
+		infowindow = new kakao.maps.InfoWindow({
+			content : iwContent,
+			removable : iwRemoveable
+		});
+
+		// 마커에 클릭이벤트를 등록합니다
+		kakao.maps.event.addListener(marker, 'click', function() {
+			  // 마커 위에 인포윈도우를 표시합니다
+			  infowindow.open(map, marker);  
+		});
+	}
+}
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(36.3503525, 127.3848542), // 지도의 중심좌표
+        level: 13 // 지도의 확대 레벨
+    };
+
+
+var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+  
+
+</script>
+</body>
+</html>
