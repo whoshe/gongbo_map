@@ -14,7 +14,7 @@
 
   <style>
     .container {
-      max-width: 1024px !important;
+      max-width: 768px !important;
       padding-left: 1rem;
       padding-right: 1rem;
     }
@@ -47,23 +47,24 @@
       </div>
     </section>
 
-    <section class="bg-base-300">
-      <div class="container mx-auto">
-        <div class="justify-between overflow-x-auto justify-items-stretch tabs tabs-boxed bg-base-300">
-          <a href="#results" class="tab">평가 결과</a>
-          <a href="#map" class="tab">공보 지도</a>
-          <a href="#data" class="tab">데이터</a>
-          <a href="#insights" class="tab">인사이트</a>
-        </div>
-      </div>
-    </section>
   </header>
+
+  <section class="sticky top-0 z-90 bg-base-300">
+    <div class="container mx-auto">
+      <div class="justify-between overflow-x-auto justify-items-stretch tabs tabs-boxed bg-base-300">
+        <a href="#results" class="tab link-neutral">평가 결과</a>
+        <a href="#map" class="tab link-neutral">공보 지도</a>
+        <a href="#data" class="tab link-neutral">데이터</a>
+        <a href="#insights" class="tab link-neutral">인사이트</a>
+      </div>
+    </div>
+  </section>
 
   <main>
     <section id="results" class="py-20 bg-secondary">
       <div class="container mx-auto">
         <h2 class="text-4xl font-bold mb-4 text-base-100">평가 결과</h2>
-        <div class="grid grid-cols-5 gap-4">
+        <div class="grid grid-cols-3 lg:grid-cols-5 gap-4">
 
           <div class="stats bg-accent text-accent-content shadow">
             <div class="stat">
@@ -86,14 +87,14 @@
             </div>
           </div>
 
-          <div class="stats shadow">
+          <div class="stats bg-base-300 text-base-content shadow">
             <div class="stat">
               <div class="stat-title">열악</div>
               <div class="stat-value">10</div>
             </div>
           </div>
 
-          <div class="stats shadow">
+          <div class="stats bg-base-300 text-base-content shadow">
             <div class="stat">
               <div class="stat-title">미분류</div>
               <div class="stat-value">11</div>
@@ -171,16 +172,16 @@
 
       <section id="insights" class="py-20">
         <div class="container mx-auto">
-          <h2 class="text-3xl font-bold mb-4">인사이트와 제안</h2>
+          <h2 class="text-3xl font-bold mb-4">기여자들의 인사이트와 제안</h2>
           <div>
             <div class="chat chat-start">
               <div class="chat-bubble chat-bubble-primary">
-                바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식
+                이번 프로젝트를 접하기 전에는 공보가 있는지도 몰랐습니다. 작업하며 지역주민이 알면 좋을 정보가 공보에 꽤 많다는 사실을 알게 되었고, 그 정보에 대한 접근성이 낮아 미디어 리터러시가 높은 기자 직군의 2차 가공이 필요하다는 사실을 배웠습니다. 공보 프로젝트를 통해 개인적으로 미디어 리터러시가 높아지는 경험을 했고, 공익적으론 기자 및 공무원의 정보가공에 도움이 되었으면 합니다.
               </div>
             </div>
             <div class="chat chat-end">
               <div class="chat-bubble chat-bubble-secondary">
-                바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식
+                지역에 관한 소중한 정보들이 공보를 통해 주민들에게 전달된다는 사실을 알게 되었습니다. 정보에 대한 접근성도 높이고, 데이터로도 개방해서 주민들에게 더 도움이 되도록 공보 전달 방식이 개선되길 바랍니다.
               </div>
             </div>
             <div class="chat chat-start">
