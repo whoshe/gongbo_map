@@ -1,104 +1,107 @@
 <!DOCTYPE html>
 <html lang="ko" data-theme="winter">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>전국 공보지도 - 코드포코리아</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.43.2/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전국 공보 지도 - 코드포코리아</title>
+  <meta property="og:title" content="전국 공보 지도 - 코드포코리아" />
+  <meta property="og:description" content="인터넷 시대와 함께 우리 곁에 찾아온 전자공보. 과연 시민들은 전자공보에 실린 정보를 쉽고 편하게 찾아볼 수 있을까요?" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://gongbo.kr/" />
+  <meta property="og:image" content="http://gongbo.kr/sns2.jpg" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.43.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-      .container {
-        max-width: 1024px !important;
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <section class="hero py-20 bg-base-200" style="background-image: url(bg_b.jpg)">
-        <div class="hero-content">
-          <div class="container mx-auto">
-            <h4 class="text-lg font-extrabold font-title sm:text-2xl lg:text-3xl">코드포코리아</h4>
-            <h1 class="mb-2 text-4xl font-extrabold font-title sm:text-5xl lg:text-7xl">전국 공보지도</h1>
-            <p class="py-6">
-              지방자치단체들이 중요한 사실들을 알리는 공식채널이 바로 <strong>공보</strong>입니다.
-              <br>
-              공보는 시민단체와 언론이 행정 영역을 감시할 때 자주 사용되는
-              공공 감시 도구이기도 합니다.
-              <br>
-              인터넷 시대와 함께 우리 곁에 찾아온 전자공보.
-              <br>
-              과연 시민들은 전자공보에 실린 정보를 쉽고 편하게 찾아볼 수 있을까요?
-            </p>
-            <p>
-              “조례와 규칙의 공포는 해당 지방자치단체의 공보에 게재하는 방법으로 한다.
-              종이공보와 전자공보는 동일한 효력을 가진다.”
-              <br>
-              -지방자치법 제33조
-            </p>
+  <style>
+    .container {
+      max-width: 1024px !important;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <section class="hero py-20 bg-base-200" style="background-image: url(bg_b.jpg)">
+      <div class="hero-content">
+        <div class="container mx-auto">
+          <h4 class="text-lg font-extrabold font-title sm:text-2xl lg:text-3xl">코드포코리아</h4>
+          <h1 class="mb-2 text-4xl font-extrabold font-title sm:text-5xl lg:text-7xl">전국 공보 지도</h1>
+          <p class="py-6">
+            지방자치단체들이 중요한 사실들을 알리는 공식채널이 바로 <strong>공보</strong>입니다.
+            <br>
+            공보는 시민단체와 언론이 행정 영역을 감시할 때 자주 사용되는
+            공공 감시 도구이기도 합니다.
+            <br>
+            인터넷 시대와 함께 우리 곁에 찾아온 전자공보.
+            <br>
+            과연 시민들은 전자공보에 실린 정보를 쉽고 편하게 찾아볼 수 있을까요?
+          </p>
+          <p>
+            “조례와 규칙의 공포는 해당 지방자치단체의 공보에 게재하는 방법으로 한다.
+            종이공보와 전자공보는 동일한 효력을 가진다.”
+            <br>
+            -지방자치법 제33조
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-base-300">
+      <div class="container mx-auto">
+        <div class="justify-between overflow-x-auto justify-items-stretch tabs tabs-boxed bg-base-300">
+          <a href="#results" class="tab">평가 결과</a>
+          <a href="#map" class="tab">공보 지도</a>
+          <a href="#data" class="tab">데이터</a>
+          <a href="#insights" class="tab">인사이트</a>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="results" class="py-20 bg-secondary">
+      <div class="container mx-auto">
+        <h2 class="text-4xl font-bold mb-4 text-base-100">평가 결과</h2>
+        <div class="grid grid-cols-5 gap-4">
+
+          <div class="stats bg-accent text-accent-content shadow">
+            <div class="stat">
+              <div class="stat-title">우수</div>
+              <div class="stat-value">3</div>
+            </div>
+          </div>
+
+          <div class="stats bg-info text-info-content shadow">
+            <div class="stat">
+              <div class="stat-title">보통</div>
+              <div class="stat-value">84</div>
+            </div>
+          </div>
+
+          <div class="stats shadow">
+            <div class="stat">
+              <div class="stat-title text-accent">미흡</div>
+              <div class="stat-value text-accent">139</div>
+            </div>
+          </div>
+
+          <div class="stats shadow">
+            <div class="stat">
+              <div class="stat-title">열악</div>
+              <div class="stat-value">10</div>
+            </div>
+          </div>
+
+          <div class="stats shadow">
+            <div class="stat">
+              <div class="stat-title">미분류</div>
+              <div class="stat-value">11</div>
+            </div>
           </div>
         </div>
-      </section>
 
-      <section class="bg-base-300">
-        <div class="container mx-auto">
-          <div class="justify-between overflow-x-auto justify-items-stretch tabs tabs-boxed bg-base-300">
-            <a href="/" class="tab">소개</a>
-            <a href="/about" class="tab">평가 결과</a>
-            <a href="/blog" class="tab">작업 과정</a>
-            <a href="/notes" class="tab">공보 지도</a>
-            <a href="/guestbook" class="tab">데이터</a>
-            <a href="/contact" class="tab">인사이트</a>
-          </div>
-        </div>
-      </section>
-    </header>
-
-    <main>
-      <section class="py-20 bg-secondary">
-        <div class="container mx-auto">
-          <h2 class="text-4xl font-bold mb-4 text-base-100">평가 결과</h2>
-          <div class="grid grid-cols-5 gap-4">
-
-            <div class="stats bg-accent text-accent-content shadow">
-              <div class="stat">
-                <div class="stat-title">우수</div>
-                <div class="stat-value">3</div>
-              </div>
-            </div>
-
-            <div class="stats bg-info text-info-content shadow">
-              <div class="stat">
-                <div class="stat-title">보통</div>
-                <div class="stat-value">84</div>
-              </div>
-            </div>
-
-            <div class="stats shadow">
-              <div class="stat">
-                <div class="stat-title text-accent">미흡</div>
-                <div class="stat-value text-accent">139</div>
-              </div>
-            </div>
-
-            <div class="stats shadow">
-              <div class="stat">
-                <div class="stat-title">열악</div>
-                <div class="stat-value">10</div>
-              </div>
-            </div>
-
-            <div class="stats shadow">
-              <div class="stat">
-                <div class="stat-title">미분류</div>
-                <div class="stat-value">11</div>
-              </div>
-            </div>
-          </div>
-
-          <h3 class="text-xl font-bold mt-12 mb-4 text-base-100">작업 과정</h2>
+        <h3 class="text-xl font-bold mt-12 mb-4 text-base-100">작업 과정</h2>
           <p class="mb-4 text-base-100">
             2022년 3월 오픈데이터데이를 기념해 코드포코리아 시빅해커들은
             전국 243곳 지방자치단체들의 전자공보 홈페이지를 일일이 방문하며
@@ -112,9 +115,9 @@
         </div>
       </section>
 
-      <section class="py-20">
+      <section id="map" class="py-20">
         <div class="container mx-auto">
-          <h2 class="text-3xl font-bold mb-4">공보지도</h2>
+          <h2 class="text-3xl font-bold mb-4">공보 지도</h2>
           <div class="bg-base-200 w-100 p-10 mb-10">
             구글마이맵
           </div>
@@ -159,41 +162,40 @@
         </div>
       </section>
 
-      <section class="py-20 bg-base-200">
+      <section id="data" class="py-20 bg-base-200">
         <div class="container mx-auto">
           <h2 class="text-3xl font-bold mb-4">공보현황목록 데이터</h2>
           <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRC3RJQhpMvEFfmjVKMG6BVewjjdDAWxkqE0lJZQG3pgNlNwCXrPJzj50j8p3r_YR0DuN_0Pzuu8bsD/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="400"></iframe>
         </div>
-	  </section>
+      </section>
 
-      <section class="py-20">
+      <section id="insights" class="py-20">
         <div class="container mx-auto">
           <h2 class="text-3xl font-bold mb-4">인사이트와 제안</h2>
           <div>
             <div class="chat chat-start">
               <div class="chat-bubble chat-bubble-primary">
-                바라는 공보 공개 방식
+                바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식
               </div>
             </div>
             <div class="chat chat-end">
               <div class="chat-bubble chat-bubble-secondary">
-                바라는 공보 공개 방식
+                바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식
               </div>
             </div>
             <div class="chat chat-start">
               <div class="chat-bubble chat-bubble-accent">
-                바라는 공보 공개 방식
+                바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식
               </div>
             </div>
             <div class="chat chat-end">
               <div class="chat-bubble chat-bubble-info">
-                바라는 공보 공개 방식
+                바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식 바라는 공보 공개 방식
               </div>
             </div>
           </div>
         </div>
       </section>
-
     </main>
 
     <footer class="p-10 footer bg-base-200 text-base-content">
@@ -217,6 +219,7 @@
           <span class="footer-title">프로젝트에 참여하는 방법</span>
           <p>
             <a href="https://code-for-korea.slack.com/join/shared_invite/zt-1agxnwk7r-XtjOFsUYTa0q3cIGecqGqQ#/shared-invite/email" target="_blank"> 코드포코리아 슬랙</a>에 가입한 후 <code>#p-진짜전자공보</code> 채널로 들어오세요</p>
+          </div>
         </div>
       </div>
     </footer>
