@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-theme="winter">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>대한민국 공보지도 - 코드포코리아</title>
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.43.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <header>
@@ -97,14 +98,29 @@
 
     </main>
 
-    <footer>
-      <p>Code for Korea X NIA</p>
-      <p>기여하신 분들:
-        기여하신 분들(닉네임 가나다 순)
-        권오현 남반장 달로스 바른생활
-        벤지 오원석 유경민 이서준
-        이은수 클루 황서원
-      </p>
+    <footer class="p-10 footer bg-base-200 text-base-content ">
+      <div class="container max-auto">
+        <h5 class="text-xl font-bold">
+          <a href="https://codefor.kr" target="_blank">코드포코리아 Code for Korea</a>
+          &
+          <a href="https://www.nia.or.kr/" target="_blank">NIA</a>
+        </h5>
+
+        <div>
+          <span class="footer-title">기여한 분들 (가나다 순)</span>
+          <p>
+            권오현 남반장 달로스 바른생활
+            벤지 오원석 유경민 이서준
+            이은수 클루 황서원
+          </p>
+        </div>
+
+        <div>
+          <span class="footer-title">프로젝트에 참여하는 방법</span>
+          <p>
+            <a href="https://code-for-korea.slack.com/join/shared_invite/zt-1agxnwk7r-XtjOFsUYTa0q3cIGecqGqQ#/shared-invite/email" target="_blank"> 코드포코리아 슬랙</a>에 가입한 후 <code>#p-진짜전자공보</code> 채널에 들어오세요</p>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
