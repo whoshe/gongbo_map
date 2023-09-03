@@ -3,9 +3,9 @@ module.exports = {
   corePlugins: {
     preflight: false,
   },
-  content: ["./**/*.{html,js}"],
+  content: ['./src/**/*.{html,js}', './public/index.html'],
   theme: {
     extend: {},
   },
-  plugins: [require("daisyui")],
+  plugins: [require('daisyui')],
 };
