@@ -12,3 +12,43 @@ div.navbar .line-menu {
   line-height: 1.5; /* == 24px */
   max-height: 48px;
 }
+
+.main-menu {
+    max-width: 800px;
+  }
+  .main-nav {
+    display: inline-flex;
+    padding: 0;
+    list-style: none;
+  }
+  .main-nav li a {
+    padding: 10px;
+    text-transform: capitalize;
+    white-space: nowrap;
+    font-size: 30px;
+    font-family: sans-serif;
+    text-decoration: none;
+  }
+  .more-btn {
+    color: red;
+  }
+  .auto-nav-more {
+    position: relative;
+  }
+  .auto-nav-more-list {
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+    text-align: right;
+    padding: 0;
+    list-style: none;
+    background: grey;
+    border-radius: 4px;
+  }
+  .auto-nav-more:hover .auto-nav-more-list {
+    opacity: 1;
+    visibility: visible;
+  }
+  

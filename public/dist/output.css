@@ -308,12 +308,6 @@ html {
   pointer-events: none;
 }
 
-.btn-square {
-  height: 3rem;
-  width: 3rem;
-  padding: 0px;
-}
-
 .btn-group > input[type="radio"].btn {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -662,45 +656,6 @@ html {
   }
 }
 
-.btn-lg {
-  height: 4rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  min-height: 4rem;
-  font-size: 1.125rem;
-}
-
-.btn-square:where(.btn-xs) {
-  height: 1.5rem;
-  width: 1.5rem;
-  padding: 0px;
-}
-
-.btn-square:where(.btn-sm) {
-  height: 2rem;
-  width: 2rem;
-  padding: 0px;
-}
-
-.btn-square:where(.btn-md) {
-  height: 3rem;
-  width: 3rem;
-  padding: 0px;
-}
-
-.btn-square:where(.btn-lg) {
-  height: 4rem;
-  width: 4rem;
-  padding: 0px;
-}
-
-.btn-circle:where(.btn-lg) {
-  height: 4rem;
-  width: 4rem;
-  border-radius: 9999px;
-  padding: 0px;
-}
-
 .btn-group .btn:not(:first-child):not(:last-child) {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -771,26 +726,8 @@ html {
   top: 0px;
 }
 
-.line-clamp-1 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-}
-
-.line-clamp-2 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
-
 .inline-block {
   display: inline-block;
-}
-
-.flex {
-  display: flex;
 }
 
 .h-5 {
@@ -815,10 +752,6 @@ html {
 
 .flex-none {
   flex: none;
-}
-
-.grow {
-  flex-grow: 1;
 }
 
 .flex-col {
@@ -893,8 +826,54 @@ div.navbar .line-menu {
   max-height: 48px;
 }
 
+.main-menu {
+  max-width: 800px;
+}
+
+.main-nav {
+  display: inline-flex;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav li a {
+  padding: 10px;
+  text-transform: capitalize;
+  white-space: nowrap;
+  font-size: 30px;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+.more-btn {
+  color: red;
+}
+
+.auto-nav-more {
+  position: relative;
+}
+
+.auto-nav-more-list {
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+  text-align: right;
+  padding: 0;
+  list-style: none;
+  background: grey;
+  border-radius: 4px;
+}
+
+.auto-nav-more:hover .auto-nav-more-list {
+  opacity: 1;
+  visibility: visible;
+}
+
 @media (min-width: 1024px) {
   .lg\:flex-row-reverse {
     flex-direction: row-reverse;
   }
 }
+  
