@@ -1,7 +1,7 @@
 {
   "name": "singan-v1.1",
   "version": "v1.1.0",
-  "description": "singan bookshopmap HTML ver.",
+  "description": "singan bookshopmap Static HTML ver.",
   "private": true,
   "scripts": {
     "start": "node index.js",
