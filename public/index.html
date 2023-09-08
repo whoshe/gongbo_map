@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko" data-theme="winter">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,116 +12,146 @@
     <meta property="og:image" content="" />
   </head>
   <body>
-    <!-- MAIN MENU -->
-    <div id="mainMenu" class="main-menu">
-      <ul id="autoNav" class="main-nav">
-        <li>
-          <a href="#">home</a>
-        </li>
-        <li>
-          <a href="#">about us</a>
-        </li>
-        <li>
-          <a href="#">portfolio</a>
-        </li>
-        <li>
-          <a href="#">team</a>
-        </li>
-        <li>
-          <a href="#">blog</a>
-        </li>
-        <li>
-          <a href="#">contact</a>
-        </li>
-        <li id="autoNavMore" class="auto-nav-more">
-          <a href="#" class="more-btn">more</a>
-          <ul id="autoNavMoreList" class="auto-nav-more-list">
-            <li></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <!-- MAIN MENU END -->
-
     <!-- 머리말 -->
-    <div class="hero min-h-screen bg-base-200">
-      <div class="hero-content flex-col lg:flex-row-reverse">
-        <img src="./img/cover.jpg" class="max-w-sm rounded-lg shadow-2xl" />
-        <div>
-          <h1 class="text-5xl font-bold">Box Office News!</h1>
-          <p class="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
-          <button class="btn btn-primary">Get Started</button>
+    <header class="bg-base-200">
+      <div class="hero p-2 md:p-4 lg:p-18">
+        <div class="hero-content mx-auto flex-col md:flex-row md:items-center">
+          <div class="md:w-1/2 items-start">
+            <figure>
+              <img src="./img/singan-logo-marked.png" class="w-16 rounded-lg" />
+            </figure>
+            <h1 class="text-5xl font-bold my-2">'신간알림'이란?</h1>
+            <p class="text-3xl mb-2">
+              책방지기의 받은편지함으로 찾아가는 문화예술 이메일 카탈로그 광고
+              서비스 입니다. </p>
+            <p class="gap-4 p-4">
+            <a
+              class="btn btn-lg btn-primary"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfpIZjMN9mnMOsu_VBg7-Vn2NaSXuSpG2e1ERByt5tvIlGG6A/viewform"
+            >
+              신청하기
+            </a>
+            <a class="btn btn-lg btn-ghost">지난 카탈로그</a>
+            </p>
+            <p>
+              <a href="https://market.bookshopmap.com/market/ads"
+                >광고 수수료: 1십만 원/종 부가세 별도, 선결제 필수</a
+              >
+            </p>
+          </div>
+          <figure class="md:w-1/2 tooltip" data-tip="<복사꽃 외딴집> for 2017 그림만화전 © 완벽한 날들">
+          <img src="./img/hero-perfect-days.jpg" class="rounded-full" alt="복사꽃 외딴집 © 완벽한 날들"/>
+          </figure>
         </div>
       </div>
-    </div>
-    <header>
-      <h1>'신간알림'이란?</h1>
-      <p>
-        책방지기의 받은편지함으로 찾아가는 문화예술 이메일 카탈로그 서비스
-        입니다.
-      </p>
-      <p>
-        이제, 새 책과 문구 상품에서 책시장, 지원사업까지 창작자/브랜드의 새
-        소식을 전국 7백여 독립서점에 부담 없이 알려보세요.
-      </p>
-      <button
-        href="https://docs.google.com/forms/d/e/1FAIpQLSfpIZjMN9mnMOsu_VBg7-Vn2NaSXuSpG2e1ERByt5tvIlGG6A/viewform"
-      >
-        신청하기
-      </button>
-      지난 카탈로그
-      <p>
-        <a href="https://market.bookshopmap.com/market/ads"
-          >광고 수수료: 1십만 원/종 (부가세 별도, 선불결제 필수)</a
-        >
-      </p>
     </header>
 
-    <!-- 탐색 막대 -->
-    <nav class="sticky top-0 z-90">
-      <div class="navbar bg-base-100">
-        <div class="flex-1 line-menu">
-          <a href="/" class="btn btn-ghost normal-case text-xl">신간알림</a>
-          <button class="btn btn-ghost">홈</button
-          ><button class="btn btn-ghost">발행 채널</button
-          ><button class="btn btn-ghost">집행 일정</button
-          ><button class="btn btn-ghost">이용 후기</button
-          ><button class="btn btn-ghost">자주 묻는 질문</button>
+      <!-- 탐색 메뉴 -->
+      <nav id="nav" class="navbar sticky top-0 glass">
+        <div class="grow">
+          <a href="/" class="btn btn-ghost normal-case text-3xl">
+            <img src="./img/pixelized-symbol.svg" class="w-10" />
+            신간알림</a>
+          <ul class="dropdown menu menu-lg menu-horizontal hidden md:flex">
+            <li>
+              <a href="https://www.bookshopmap.com">홈</a>
+            </li>
+            <li>
+              <a href="#">발행 채널</a>
+            </li>
+            <li>
+              <a href="#">집행 일정</a>
+            </li>
+            <li>
+              <a href="#">이용 후기</a>
+            </li>
+            <li>
+              <a href="#">자주 묻는 질문</a>
+            </li>
+          </ul>
         </div>
-        <div class="flex-none">
-          <button class="btn">
-            <!-- 메뉴 더 보기-->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              class="inline-block w-5 h-5 stroke-current"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"
-              ></path>
-            </svg>
-            메뉴
-          </button>
+        <div class="dropdown md:hidden">
+          <ul class="dropdown-end menu menu-lg menu-horizontal">
+            <li>
+          <details>
+            <summary>메뉴</summary>
+            <ul tabindex="0" class="bg-base-100 menu dropdown-content w-80">
+              <li>
+                <a href="https://www.bookshopmap.com">홈</a>
+              </li>
+              <li>
+                <a href="#">발행 채널</a>
+              </li>
+              <li>
+                <a href="#">집행 일정</a>
+              </li>
+              <li>
+                <a href="#">이용 후기</a>
+              </li>
+              <li>
+                <a href="#">자주 묻는 질문</a>
+              </li>
+            </ul>
+          </details>
+        </li>
         </div>
-      </div>
+      </nav>
+  
+
+    <!-- 바닥 탐색 메뉴 -->
+
+    <nav id="nav" class="md:hidden">
+    <ul class="btm-nav glass">
+      <li class="hover:bg-base-300">
+        <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+        <span class="btm-nav-label">홈</span>
+      </li>
+      <li class="hover:bg-base-300">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.839 2.51l-4.66-2.51m0 0l-1.023-.55a2.25 2.25 0 00-2.134 0l-1.022.55m0 0l-4.661 2.51m16.5 1.615a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V8.844a2.25 2.25 0 011.183-1.98l7.5-4.04a2.25 2.25 0 012.134 0l7.5 4.04a2.25 2.25 0 011.183 1.98V19.5z"></path>
+        </svg>
+        <span class="btm-nav-label">채널</span>
+      </li>
+      <li class="hover:bg-base-300">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"></path>
+        </svg>
+        <span class="btm-nav-label">일정</span>
+      </li>
+      <li class="hover:bg-base-300">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path></svg>        
+        <span class="btm-nav-label">후기</span>
+      </li>
+    </ul>
     </nav>
 
     <!-- 내용 -->
     <main>
       <section id="sponsors">
         <h1 class="text-3xl font-bold underline">
-          50+ 문화예술 창작자/브랜드가 함께합니다.
+          50+ 문화예술 창작자/브랜드와 함께합니다.
         </h1>
+        <p>
+          목록 
+        </p>
       </section>
-      <section id="benefits">
+      <section id="benefit" class="container mx-auto items-center justify-center">
+        <div class="text-center">
+          <h3 class="text-xl font-bold text-primary">
+            왜 신간알림인가? 
+          </h3>
+        <h1 class="text-5xl">
+          새 책과 문구 상품에서 책시장, 지원사업까지
+        </h1>
+        <p>
+          이제, 창작자/브랜드의 새 소식을 전국 7백여 독립서점에 부담 없이 알릴 수 있어요.
+        </p>
+      </div>
+        <figure class="tooltip" data-tip="동네서점 서비스의 목적">
+          <img src="./img/purpose-of-bookshopmap.png" class="rounded-full" alt="동네서점 서비스의 목적"/>
+        </figure>
+      </section>
+      <section id="how">
         <h3>발행 채널</h3>
         <h1 class="text-3xl font-bold underline">독자와 더 가까워지도록</h1>
         <ul>
@@ -143,7 +173,7 @@
           노출되지 않음
         </p>
       </section>
-      <section id="content">
+      <section id="when">
         <h3>캠페인 일정</h3>
         <h1 class="text-3xl font-bold underline">월 또는 금요일 주 2회 발행</h1>
         <ul>
@@ -241,9 +271,5 @@
       <p>© 2015-2023 주식회사 동네서점 Dongneseojeom Inc.</p>
     </footer>
 
-    <!-- 자바스크립트 코드 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- More Nav Menu 코드 -->
-    <script src="./autoNav.js"></script>
   </body>
 </html>
