@@ -13,14 +13,13 @@
   </head>
   <body>
     <!-- 머리말 -->
-    <header class="bg-base-200">
-      <div class="hero p-2 md:p-4 lg:p-18">
-        <div class="hero-content mx-auto flex-col md:flex-row md:items-center">
+    <header class="hero bg-base-200">
+        <div class="hero-content mx-auto flex-col md:flex-row md:items-center justify-center">
           <div class="md:w-1/2 items-start">
             <figure>
               <img src="./img/singan-logo-marked.png" class="w-16 rounded-lg" />
             </figure>
-            <h1 class="text-5xl font-bold my-2">'신간알림'이란?</h1>
+            <h1 class="text-5xl my-2">'신간알림'이란?</h1>
             <p class="text-3xl mb-2">
               책방지기의 받은편지함으로 찾아가는 문화예술 이메일 카탈로그 광고
               서비스 입니다. </p>
@@ -39,11 +38,10 @@
               >
             </p>
           </div>
-          <figure class="md:w-1/2 tooltip" data-tip="<복사꽃 외딴집> for 2017 그림만화전 © 완벽한 날들">
-          <img src="./img/hero-perfect-days.jpg" class="rounded-full" alt="복사꽃 외딴집 © 완벽한 날들"/>
+          <figure class="md:w-1/2 tooltip" data-tip="© 완벽한 날들 from 2017 그림만화전">
+          <img src="./img/hero-perfect-days.jpg" class="mx-auto rounded-full" alt="© 완벽한 날들 from 2017 그림만화전"/>
           </figure>
         </div>
-      </div>
     </header>
 
       <!-- 탐색 메뉴 -->
@@ -57,10 +55,10 @@
               <a href="https://www.bookshopmap.com">홈</a>
             </li>
             <li>
-              <a href="#">발행 채널</a>
+              <a href="#">제공 혜택</a>
             </li>
             <li>
-              <a href="#">집행 일정</a>
+              <a href="#">캠페인 일정</a>
             </li>
             <li>
               <a href="#">이용 후기</a>
@@ -73,17 +71,17 @@
         <div class="dropdown md:hidden">
           <ul class="dropdown-end menu menu-lg menu-horizontal">
             <li>
-          <details>
+            <details>
             <summary>메뉴</summary>
             <ul tabindex="0" class="bg-base-100 menu dropdown-content w-80">
               <li>
                 <a href="https://www.bookshopmap.com">홈</a>
               </li>
               <li>
-                <a href="#">발행 채널</a>
+                <a href="#">제공 혜택</a>
               </li>
               <li>
-                <a href="#">집행 일정</a>
+                <a href="#">캠페인 일정</a>
               </li>
               <li>
                 <a href="#">이용 후기</a>
@@ -92,14 +90,13 @@
                 <a href="#">자주 묻는 질문</a>
               </li>
             </ul>
-          </details>
-        </li>
+            </details>
+            </li>
         </div>
       </nav>
   
 
     <!-- 바닥 탐색 메뉴 -->
-
     <nav id="nav" class="md:hidden">
     <ul class="btm-nav glass">
       <li class="hover:bg-base-300">
@@ -110,7 +107,7 @@
         <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.839 2.51l-4.66-2.51m0 0l-1.023-.55a2.25 2.25 0 00-2.134 0l-1.022.55m0 0l-4.661 2.51m16.5 1.615a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V8.844a2.25 2.25 0 011.183-1.98l7.5-4.04a2.25 2.25 0 012.134 0l7.5 4.04a2.25 2.25 0 011.183 1.98V19.5z"></path>
         </svg>
-        <span class="btm-nav-label">채널</span>
+        <span class="btm-nav-label">혜택</span>
       </li>
       <li class="hover:bg-base-300">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -135,24 +132,24 @@
           목록 
         </p>
       </section>
-      <section id="benefit" class="container mx-auto items-center justify-center">
+      <section id="purpose" class="container mx-auto justify-center items-center">
         <div class="text-center">
           <h3 class="text-xl font-bold text-primary">
             왜 신간알림인가? 
           </h3>
         <h1 class="text-5xl">
-          새 책과 문구 상품에서 책시장, 지원사업까지
+          새 책과 문구에서 책시장까지
         </h1>
         <p>
           이제, 창작자/브랜드의 새 소식을 전국 7백여 독립서점에 부담 없이 알릴 수 있어요.
         </p>
-      </div>
-        <figure class="tooltip" data-tip="동네서점 서비스의 목적">
-          <img src="./img/purpose-of-bookshopmap.png" class="rounded-full" alt="동네서점 서비스의 목적"/>
+        </div>
+        <figure class="container tooltip" data-tip="동네서점 서비스의 목적">
+          <img src="./img/purpose-of-bookshopmap.png" class="mx-auto" alt="동네서점 서비스의 목적"/>
         </figure>
       </section>
-      <section id="how">
-        <h3>발행 채널</h3>
+      <section id="benefit">
+        <h3>제공 혜택</h3>
         <h1 class="text-3xl font-bold underline">독자와 더 가까워지도록</h1>
         <ul>
           <li>
