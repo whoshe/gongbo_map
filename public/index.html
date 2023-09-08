@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -13,113 +13,193 @@
   </head>
   <body>
     <!-- 머리말 -->
-    <header class="hero bg-base-200">
-        <div class="hero-content mx-auto flex-col md:flex-row md:items-center justify-center">
-          <div class="md:w-1/2 items-start">
-            <figure>
-              <img src="./img/singan-logo-marked.png" class="w-16 rounded-lg" />
-            </figure>
-            <h1 class="text-5xl my-2">'신간알림'이란?</h1>
-            <p class="text-3xl mb-2">
-              책방지기의 받은편지함으로 찾아가는 문화예술 이메일 카탈로그 광고
-              서비스 입니다. </p>
-            <p class="gap-4 p-4">
+    <header id="header" class="hero bg-base-200">
+      <div
+        class="hero-content mx-auto flex-col md:flex-row md:items-center justify-center"
+      >
+        <div class="md:w-1/2 items-start">
+          <figure>
+            <img src="./img/singan-logo-marked.png" class="w-16 rounded-lg" />
+          </figure>
+          <h1 class="text-5xl my-2">'신간알림'이란?</h1>
+          <p class="text-3xl mb-2">
+            책방지기의 받은편지함으로 찾아가는 문화예술 이메일 카탈로그 광고
+            서비스 입니다.
+          </p>
+          <p class="gap-4 p-4">
             <a
               class="btn btn-lg btn-primary"
               href="https://docs.google.com/forms/d/e/1FAIpQLSfpIZjMN9mnMOsu_VBg7-Vn2NaSXuSpG2e1ERByt5tvIlGG6A/viewform"
             >
               신청하기
             </a>
-            <a class="btn btn-lg btn-ghost">지난 카탈로그</a>
-            </p>
-            <p>
-              <a href="https://market.bookshopmap.com/market/ads"
-                >광고 수수료: 1십만 원/종 부가세 별도, 선결제 필수</a
-              >
-            </p>
-          </div>
-          <figure class="md:w-1/2 tooltip" data-tip="© 완벽한 날들 from 2017 그림만화전">
-          <img src="./img/hero-perfect-days.jpg" class="mx-auto rounded-full" alt="© 완벽한 날들 from 2017 그림만화전"/>
-          </figure>
+            <a
+              href="https://blog.bookshopmap.com/tag/ads/"
+              class="btn btn-lg btn-ghost"
+              >지난 카탈로그</a
+            >
+          </p>
+          <p>
+            <a href="https://market.bookshopmap.com/market/ads"
+              >광고 수수료: 1십만 원/종 부가세 별도, 선결제 필수</a
+            >
+          </p>
         </div>
+        <figure
+          class="md:w-1/2 tooltip"
+          data-tip="© 완벽한 날들 from 2017 그림만화전"
+        >
+          <img
+            src="./img/hero-perfect-days.jpg"
+            class="mx-auto rounded-full"
+            alt="© 완벽한 날들 from 2017 그림만화전"
+          />
+        </figure>
+      </div>
     </header>
 
-      <!-- 탐색 메뉴 -->
-      <nav id="nav" class="navbar sticky top-0 glass">
-        <div class="grow">
-          <a href="/" class="btn btn-ghost normal-case text-3xl">
-            <img src="./img/pixelized-symbol.svg" class="w-10" />
-            신간알림</a>
-          <ul class="dropdown menu menu-lg menu-horizontal hidden md:flex">
-            <li>
-              <a href="https://www.bookshopmap.com">홈</a>
-            </li>
-            <li>
-              <a href="#">제공 혜택</a>
-            </li>
-            <li>
-              <a href="#">캠페인 일정</a>
-            </li>
-            <li>
-              <a href="#">이용 후기</a>
-            </li>
-            <li>
-              <a href="#">자주 묻는 질문</a>
-            </li>
-          </ul>
-        </div>
-        <div class="dropdown md:hidden">
-          <ul class="dropdown-end menu menu-lg menu-horizontal">
-            <li>
+    <!-- 탐색 메뉴sticky top-0 glass -->
+    <nav id="nav" class="navbar">
+      <div class="grow">
+        <a href="/" class="btn btn-ghost normal-case text-3xl">
+          <img src="./img/pixelized-symbol.svg" class="w-10" />
+          신간알림</a
+        >
+        <ul
+          class="dropdown menu menu-lg menu-horizontal hidden md:flex justify-between"
+        >
+          <li>
+            <a href="https://www.bookshopmap.com">홈</a>
+          </li>
+          <li>
+            <a href="#benefits">제공 혜택</a>
+          </li>
+          <li>
+            <a href="#campaign">캠페인 일정</a>
+          </li>
+          <li>
+            <a href="#review">이용 후기</a>
+          </li>
+          <li>
+            <a href="#faq">자주 묻는 질문</a>
+          </li>
+          <li>
+            <a href="https://market.bookshopmap.com/market/ads">결제하기</a>
+          </li>
+        </ul>
+      </div>
+      <div class="dropdown md:hidden">
+        <ul class="dropdown-end menu menu-lg menu-horizontal">
+          <li>
             <details>
-            <summary>메뉴</summary>
-            <ul tabindex="0" class="bg-base-100 menu dropdown-content w-80">
-              <li>
-                <a href="https://www.bookshopmap.com">홈</a>
-              </li>
-              <li>
-                <a href="#">제공 혜택</a>
-              </li>
-              <li>
-                <a href="#">캠페인 일정</a>
-              </li>
-              <li>
-                <a href="#">이용 후기</a>
-              </li>
-              <li>
-                <a href="#">자주 묻는 질문</a>
-              </li>
-            </ul>
+              <summary>메뉴</summary>
+              <ul tabindex="0" class="bg-base-100 menu dropdown-content w-80">
+                <li>
+                  <a href="https://www.bookshopmap.com">홈</a>
+                </li>
+                <li>
+                  <a href="#benefits">제공 혜택</a>
+                </li>
+                <li>
+                  <a href="#campaign">캠페인 일정</a>
+                </li>
+                <li>
+                  <a href="#review">이용 후기</a>
+                </li>
+                <li>
+                  <a href="#faq">자주 묻는 질문</a>
+                </li>
+                <li>
+                  <a href="https://market.bookshopmap.com/market/ads"
+                    >결제하기</a
+                  >
+                </li>
+              </ul>
             </details>
-            </li>
-        </div>
-      </nav>
-  
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <!-- 바닥 탐색 메뉴 -->
     <nav id="nav" class="md:hidden">
-    <ul class="btm-nav glass">
-      <li class="hover:bg-base-300">
-        <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
-        <span class="btm-nav-label">홈</span>
-      </li>
-      <li class="hover:bg-base-300">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.839 2.51l-4.66-2.51m0 0l-1.023-.55a2.25 2.25 0 00-2.134 0l-1.022.55m0 0l-4.661 2.51m16.5 1.615a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V8.844a2.25 2.25 0 011.183-1.98l7.5-4.04a2.25 2.25 0 012.134 0l7.5 4.04a2.25 2.25 0 011.183 1.98V19.5z"></path>
-        </svg>
-        <span class="btm-nav-label">혜택</span>
-      </li>
-      <li class="hover:bg-base-300">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"></path>
-        </svg>
-        <span class="btm-nav-label">일정</span>
-      </li>
-      <li class="hover:bg-base-300">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path></svg>        
-        <span class="btm-nav-label">후기</span>
-      </li>
-    </ul>
+      <ul class="btm-nav glass">
+        <a href="#benefits" class="hover:bg-base-300">
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.839 2.51l-4.66-2.51m0 0l-1.023-.55a2.25 2.25 0 00-2.134 0l-1.022.55m0 0l-4.661 2.51m16.5 1.615a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V8.844a2.25 2.25 0 011.183-1.98l7.5-4.04a2.25 2.25 0 012.134 0l7.5 4.04a2.25 2.25 0 011.183 1.98V19.5z"
+            ></path>
+          </svg>
+          <span class="btm-nav-label">혜택</span>
+        </a>
+        <a href="#campaign" class="hover:bg-base-300">
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
+            ></path>
+          </svg>
+          <span class="btm-nav-label">일정</span>
+        </a>
+        <a href="#review" class="hover:bg-base-300">
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
+            ></path>
+          </svg>
+          <span class="btm-nav-label">후기</span>
+        </a>
+        <a
+          href="https://market.bookshopmap.com/market/ads"
+          class="hover:bg-base-300"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"
+            ></path>
+          </svg>
+          <span class="btm-nav-label">결제</span>
+        </a>
+      </ul>
     </nav>
 
     <!-- 내용 -->
@@ -128,27 +208,29 @@
         <h1 class="text-3xl font-bold underline">
           50+ 문화예술 창작자/브랜드와 함께합니다.
         </h1>
-        <p>
-          목록 
-        </p>
+        <p>목록</p>
       </section>
-      <section id="purpose" class="container mx-auto justify-center items-center">
+      <section
+        id="purpose"
+        class="container mx-auto justify-center items-center"
+      >
         <div class="text-center">
-          <h3 class="text-xl font-bold text-primary">
-            왜 신간알림인가? 
-          </h3>
-        <h1 class="text-5xl">
-          새 책과 문구에서 책시장까지
-        </h1>
-        <p>
-          이제, 창작자/브랜드의 새 소식을 전국 7백여 독립서점에 부담 없이 알릴 수 있어요.
-        </p>
+          <h3 class="text-xl font-bold text-primary">왜 신간알림인가?</h3>
+          <h1 class="text-5xl">새 책과 문구에서 책시장까지</h1>
+          <p>
+            이제, 창작자/브랜드의 새 소식을 전국 7백여 독립서점에 부담 없이 알릴
+            수 있어요.
+          </p>
         </div>
         <figure class="container tooltip" data-tip="동네서점 서비스의 목적">
-          <img src="./img/purpose-of-bookshopmap.png" class="mx-auto" alt="동네서점 서비스의 목적"/>
+          <img
+            src="./img/purpose-of-bookshopmap.png"
+            class="mx-auto"
+            alt="동네서점 서비스의 목적"
+          />
         </figure>
       </section>
-      <section id="benefit">
+      <section id="benefits">
         <h3>제공 혜택</h3>
         <h1 class="text-3xl font-bold underline">독자와 더 가까워지도록</h1>
         <ul>
@@ -170,7 +252,7 @@
           노출되지 않음
         </p>
       </section>
-      <section id="when">
+      <section id="campaign">
         <h3>캠페인 일정</h3>
         <h1 class="text-3xl font-bold underline">월 또는 금요일 주 2회 발행</h1>
         <ul>
@@ -214,7 +296,9 @@
       <section id="faq">
         <h3>자주 묻는 질문</h3>
         <h1 class="text-3xl font-bold underline">
-          [자주묻는질문]에서 사람들이 자주 묻는 질문과 답을 알아보세요.
+          더 궁금한 내용은 [<a href="https://www.bookshopmap.com/about#inquiry"
+            >문의하기</a
+          >]로 연락해주세요.
         </h1>
         <ul>
           <li>
@@ -267,6 +351,5 @@
       </ul>
       <p>© 2015-2023 주식회사 동네서점 Dongneseojeom Inc.</p>
     </footer>
-
   </body>
 </html>
