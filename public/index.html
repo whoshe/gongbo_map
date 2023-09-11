@@ -6,13 +6,8 @@
     <link href="./dist/output.css" rel="stylesheet" />
     <title>동네서점 신간알림</title>
     <meta name="description" content="문화예술 이메일 카탈로그 광고 서비스" />
-    <link
-      rel="icon"
-      href="./img/favicon.ico"
-      type="image/x-icon"
-      sizes="16x16"
-    />
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="16x16" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link
       rel="apple-touch-icon"
       href="./img/apple-touch-icon.png"
@@ -48,9 +43,9 @@
     <!-- 머리말 -->
     <header id="header" class="hero bg-base-200">
       <div
-        class="hero-content mx-auto flex-col md:flex-row md:items-center justify-center"
+        class="hero-content mx-auto flex-col lg:flex-row lg:items-center justify-center"
       >
-        <div class="md:w-1/2 items-start">
+        <div class="lg:w-1/2 items-start">
           <figure>
             <img src="./img/singan-logo-marked.png" class="w-16 rounded-lg" />
           </figure>
@@ -87,7 +82,7 @@
           </p>
         </div>
         <figure
-          class="md:w-1/2 tooltip tooltip-bottom mt-10 md:mt-0"
+          class="lg:w-1/2 tooltip tooltip-bottom mt-10 md:mt-0"
           data-tip="© 완벽한 날들 from 2017 그림만화전"
         >
           <img
@@ -99,12 +94,9 @@
       </div>
     </header>
 
-    <!-- 탐색 메뉴sticky top-0 glass -->
+    <!-- 탐색 메뉴 sticky top-0 z-[3]-->
 
-    <nav
-      id="nav"
-      class="navbar bg-base-200 shadow-md rounded-b-3xl sticky top-0 z-[3]"
-    >
+    <nav id="nav" class="navbar bg-base-200 shadow-md rounded-b-3xl">
       <section class="container mx-auto">
         <a href="/" class="btn btn-ghost normal-case text-3xl">
           <svg
@@ -651,16 +643,16 @@
       <!-- 제공 혜택 -->
       <section
         id="benefits"
-        class="container mx-auto items-center justify-center my-16 md:my-32 text-start md:text-center"
+        class="container mx-auto items-center justify-center my-16 lg:my-32 text-start lg:text-center"
       >
         <div class="grid grid-flow-row gap-2">
           <h3 class="text-xl font-bold text-primary">제공 혜택</h3>
           <h1 class="text-5xl">새 책과 문구에서 책시장까지</h1>
           <h2
-            class="text-3xl md:flex md:flex-wrap my-8 items-center justify-center"
+            class="text-3xl lg:flex lg:flex-wrap my-8 items-center justify-center"
           >
             <figure
-              class="flex flex-wrap justify-center gap-5 mt-10 md:justify-around text-neutral-400 md:w-1/2 tooltip tooltip-bottom"
+              class="flex flex-wrap justify-center gap-5 mt-10 lg:justify-around text-neutral-400 lg:w-1/2 tooltip tooltip-bottom"
               data-tip="© 전인성 in 개똥이네책놀이터"
             >
               <img
@@ -669,8 +661,8 @@
                 alt="© 전인성 in 개똥이네책놀이터"
               />
             </figure>
-            <ul class="list-decimal ml-4 md:ml-0 text-start md:w-1/2">
-              <li class="p-4">
+            <ul class="list-decimal text-start lg:w-1/2 ml-8 lg:ml-0">
+              <li class="my-4">
                 <a
                   href="https://www.bookshopmap.com/campaign"
                   class="link link-hover"
@@ -679,7 +671,7 @@
                 발행
                 <p>: 전국 7백여 책방지기 등 문화예술 공간 운영자 구독자 대상</p>
               </li>
-              <li class="p-4">
+              <li class="my-4">
                 <a
                   href="https://www.instagram.com/bookshopmap"
                   class="link link-hover"
@@ -690,7 +682,7 @@
                   : 2만여 2~30대 가치 소비와 공유에 적극적인 밀레니얼 독자 대상
                 </p>
               </li>
-              <li class="p-4">
+              <li class="my-4">
                 소통 및 거래 연결
                 <p>
                   : 직거래 또는 도매 거래처로 주문, 신청서 등 원하는 방식의 연결
@@ -710,24 +702,24 @@
       <!-- 캠페인 일정 -->
       <section
         id="campaign"
-        class="container mx-auto items-center justify-center my-16 md:my-32 text-start md:text-center"
+        class="container mx-auto items-center justify-center my-16 lg:my-32 text-start lg:text-center"
       >
         <div class="grid grid-flow-row gap-2">
           <h3 class="text-xl font-bold text-primary">캠페인 일정</h3>
           <h1 class="text-5xl">월 또는 금요일 주 2회 발행</h1>
           <h2
-            class="text-3xl md:flex md:flex-wrap my-8 items-center justify-center"
+            class="text-3xl lg:flex lg:flex-wrap my-8 items-center justify-center"
           >
-            <ul class="list-decimal ml-4 md:ml-0 text-start md:w-1/2">
-              <li class="p-4">
+            <ul class="list-decimal text-start lg:w-1/2 ml-8 lg:ml-0">
+              <li class="my-4">
                 검토
                 <p>: 수수료 결제일 기준 7일 이내 검토 회신</p>
               </li>
-              <li class="p-4">
+              <li class="my-4">
                 집행
                 <p>: 검토 결과 회신 후 14일 이내 광고 발행</p>
               </li>
-              <li class="p-4">
+              <li class="my-4">
                 보고
                 <p>: 인스타그램 노출 시 광고주 계정 ID를 태그 공유</p>
               </li>
@@ -739,7 +731,7 @@
               </p>
             </ul>
             <figure
-              class="flex flex-wrap justify-center gap-5 mt-10 md:justify-around text-neutral-400 md:w-1/2 tooltip tooltip-bottom"
+              class="flex flex-wrap justify-center gap-5 mt-10 lg:justify-around text-neutral-400 lg:w-1/2 tooltip tooltip-bottom"
               data-tip="© 관객의취향 from 동네서점독립영화전"
             >
               <img
@@ -858,11 +850,11 @@
     <!-- 바닥글 연락처 및 저작권 -->
 
     <footer
-      class="footer footer-center pb-20 p-4 md:pb-4 bg-base-200 text-base-content"
+      class="footer footer-center pb-20 p-4 lg:pb-4 bg-base-200 text-base-content"
     >
       <!-- 연락처 영역 -->
-      <contact class="container mx-auto md:flex md:justify-between">
-        <aside class="md:flex items-center grid-flow-col md:grow">
+      <contact class="container mx-auto lg:flex lg:justify-between">
+        <aside class="lg:flex items-center grid-flow-col md:grow">
           <!-- 웹사이트 -->
           <a
             href="https://www.bookshopmap.com"
@@ -883,16 +875,16 @@
             </svg>
             동네서점
           </a>
-          <div class="items-center justify-start text-center md:text-left">
+          <div class="items-center justify-start text-center lg:text-left">
             <p>내 이웃의 문화예술</p>
-            <p class="hidden md:flex">
+            <p class="hidden lg:flex">
               함께 만드는 일상 속 문화예술 여행 안내서
             </p>
           </div>
         </aside>
 
         <!-- 소셜미디어 -->
-        <nav class="md:place-self-center md:justify-self-end">
+        <nav class="lg:place-self-center lg:justify-self-end">
           <div class="grid grid-flow-col gap-2">
             <a
               href="https://www.instagram.com/bookshopmap"
@@ -969,7 +961,7 @@
         </nav>
       </contact>
       <!-- 저작권 영역 -->
-      <copyright class="md:flex md:flex-wrap items-center justify-center">
+      <copyright class="lg:flex lg:flex-wrap items-center justify-center">
         <!-- 후원 배지 -->
         <a
           id="support"

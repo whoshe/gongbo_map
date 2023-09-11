@@ -1,50 +1,12 @@
 @tailwind base;
-@import url("./fonts/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css");
 
 @layer base {
-  html {
-    font-family:
-      "Pretendard Variable",
-      Pretendard,
-      -apple-system,
-      BlinkMacSystemFont,
-      system-ui,
-      Roboto,
-      "Helvetica Neue",
-      "Segoe UI",
-      "Apple SD Gothic Neo",
-      "Noto Sans KR",
-      "Malgun Gothic",
-      "Apple Color Emoji",
-      "Segoe UI Emoji",
-      "Segoe UI Symbol",
-      sans-serif;
-  }
-  h1 {
-    @apply text-5xl;
-  }
-  h2 {
-    @apply text-3xl;
-  }
-  h3 {
-    @apply text-xl;
+  @font-face {
+    font-family: "Pretendard Variable";
+    font-display: swap;
+    src: url("/fonts/pretendard/dist/web/variable/woff2/PretendardVariable.woff2")
+      format("woff2-variations");
   }
 }
-
 @tailwind components;
 @tailwind utilities;
-
-.ellipsis {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
-  font-size: 16px;
-  line-height: 1.5; /* == 24px */
-  max-height: 48px;
-}
-
-.grayscale {
-  filter: grayscale(100%);
-}
