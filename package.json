@@ -19,6 +19,7 @@
   "author": "Funnyplan",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "pretendard": "^1.3.8"
   }
 }
