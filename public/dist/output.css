@@ -2442,6 +2442,10 @@ html {
   fill: currentColor;
 }
 
+.fill-neutral-400 {
+  fill: #a3a3a3;
+}
+
 .p-4 {
   padding: 1rem;
 }
@@ -2524,6 +2528,16 @@ html {
 .text-primary {
   --tw-text-opacity: 1;
   color: hsl(var(--p) / var(--tw-text-opacity));
+}
+
+.text-base-300 {
+  --tw-text-opacity: 1;
+  color: hsl(var(--b3) / var(--tw-text-opacity));
+}
+
+.text-neutral-300 {
+  --tw-text-opacity: 1;
+  color: rgb(212 212 212 / var(--tw-text-opacity));
 }
 
 .underline {
