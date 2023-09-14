@@ -919,7 +919,7 @@
 
       <!-- 이용 후기 -->
       <section
-        id="faq"
+        id="review"
         class="container mx-auto items-center justify-center my-16 lg:my-32 text-start lg:text-center"
       >
         <div class="grid grid-flow-row gap-2">
@@ -956,7 +956,7 @@
                 웅진주니어
                 <time class="opacity-50">2017 몬스터콜</time>
               </div>
-              <div class="chat-bubble">
+              <div class="chat-bubble bg-base-200 text-gray-800 dark:bg-gray-400">
                 소설원작 영화 시사회를 그림책 서점 50곳의 독자 대상으로 열고,
                 포스터와 견본도서를 무료 배포했습니다. 캠페인 결과 188명 독자
                 참여 및 책 판매 3배 증가했어요.
@@ -973,7 +973,7 @@
                 JTBC브랜드
                 <time class="opacity-50">2019 세계책의날</time>
               </div>
-              <div class="chat-bubble">
+              <div class="chat-bubble bg-base-200 text-gray-800 dark:bg-gray-400">
                 한정판 기념일 책갈피를 전국 2백여 독립서점을 찾는 독자 대상으로
                 무료 배포했습니다. 캠페인 결과 문화예술 공동체에 이바지하는
                 브랜드 이미지에 도움이 됐어요.
@@ -990,7 +990,7 @@
                 서울국제도서전
                 <time class="opacity-50">2020 책도시산책</time>
               </div>
-              <div class="chat-bubble">
+              <div class="chat-bubble bg-base-200 text-gray-800 dark:bg-gray-400">
                 스탬프투어 지도를 29곳의 독립서점 등 48곳의 문화예술 공간에서
                 무료 배포했습니다. 캠페인 결과 1만여 명의 서울 시민이 스탬프
                 투어에 온·오프 참여했어요.
@@ -1014,8 +1014,8 @@
               >문의하기</a
             >로 연락해주세요.
           </h1>
-          <h2 class="text-3xl lg:flex lg:flex-wrap my-8 text-start">
-            <ul class="join join-vertical bg-base-200">
+          <accordion class="text-3xl lg:flex lg:flex-wrap my-8 text-start">
+            <ul class="join join-vertical bg-base-200 rounded-3xl">
               <li class="join-item collapse collapse-arrow">
                 <input type="radio" name="my-accordion" checked="checked" />
                 <p class="collapse-title text-xl font-medium">
@@ -1118,7 +1118,7 @@
                 </div>
               </li>
             </ul>
-          </h2>
+          </accordion>
         </div>
       </section>
 
@@ -1178,11 +1178,11 @@
     >
       <!-- 연락처 영역 -->
       <contact class="container mx-auto lg:flex lg:justify-between">
-        <aside class="lg:flex items-center grid-flow-col md:grow">
+        <aside class="flex flex-col lg:flex-row items-center lg:grow">
           <!-- 웹사이트 -->
           <a
             href="https://www.bookshopmap.com"
-            class="btn btn-ghost normal-case text-2xl justify-start"
+            class="btn btn-ghost normal-case text-2xl"
           >
             <svg
               width="40"
@@ -1198,19 +1198,22 @@
             </svg>
             동네서점
           </a>
-          <div class="items-center justify-start text-center lg:text-left">
-            <p class="hidden lg:flex">내 이웃의 문화예술&nbsp;</p>
-            <!-- 저작권 -->
-            <copyright class="hidden lg:flex">
-              <a
-                href="https://www.dongneseojeom.com"
-                class="link link-hover"
-                rel="noopener"
-              >
-                © 2015-2023 Dongneseojeom Inc.
-              </a>
-            </copyright>
-          </div>
+          <!-- 저작권 -->
+          <copyright
+            class="items-center justify-start text-center lg:text-left"
+          >
+            <a
+              href="https://www.dongneseojeom.com"
+              class="link link-hover"
+              rel="noopener"
+            >
+              &copy; 2015-2023 Dongneseojeom Inc.</a
+            >
+            <span class="hidden lg:flex"
+              >동네서점 서비스의 데이터와 콘텐츠의 저작권은 각 해당 저작자 또는
+              제보자, 주식회사 동네서점에 있습니다.</span
+            >
+          </copyright>
         </aside>
 
         <!-- 소셜미디어 -->
@@ -1290,7 +1293,7 @@
       </contact>
       <!-- 후원 배지 -->
       <support
-        class="lg:flex lg:flex-wrap items-center justify-center tooltip tooltip-right"
+        class="grid grid-flow-row items-center justify-center tooltip tooltip-right gap-2"
         data-tip="후원하기"
       >
         <a
