@@ -229,11 +229,10 @@
         </figure>
       </section>
     </header>
-
     <!-- 탐색 메뉴 -->
     <nav
       id="nav"
-      class="sticky top-0 z-[3] navbar shadow-md bg-base-200 rounded-b-3xl glass"
+      class="sticky top-0 z-[3] navbar shadow-md rounded-b-3xl bg-base-200"
     >
       <section class="container mx-auto">
         <a href="/" class="btn btn-ghost normal-case text-3xl">
@@ -403,11 +402,19 @@
             </li>
           </ul>
         </div>
-
         <!-- 소셜미디어 채널 구독하기 -->
+
+        <!-- 신청하기 버튼 for 모바일 -->
+        <a
+          class="btn btn-primary lg:hidden"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfpIZjMN9mnMOsu_VBg7-Vn2NaSXuSpG2e1ERByt5tvIlGG6A/viewform"
+        >
+          신청하기
+        </a>
+
         <a
           href="https://instagram.com/bookshopmap"
-          class="btn btn-ghost btn-square"
+          class="btn btn-ghost btn-square hidden lg:flex"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -448,15 +455,12 @@
             ></path></svg
         ></a>
 
-        <div class="dropdown md:hidden z-[3]">
+        <div class="dropdown hidden lg:flex z-[3]">
           <ul class="dropdown-end menu menu-lg menu-horizontal">
             <li>
               <details>
                 <summary>메뉴</summary>
-                <ul
-                  tabindex="0"
-                  class="bg-base-200 dropdown-content w-80 glass"
-                >
+                <ul tabindex="0" class="bg-base-200 dropdown-content w-80">
                   <li>
                     <a href="https://www.bookshopmap.com">홈</a>
                   </li>
